@@ -3,6 +3,9 @@ import logging
 import csv
 file_rx_non_promo = "rx_non_promo_list.txt"
 file_otc_non_promo = "otc_non_promo_list.txt"
+file_rx_promo = "rx_promo_list.txt"
+file_otc_promo = "otc_promo_list.txt"
+file_all_promo = "all_promo_list.txt"
 
 logging.basicConfig(filename='product.log', level=logging.INFO, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 class ITEMException(Exception):
@@ -69,19 +72,41 @@ class SKUworkout():
             if item.promo == 'PROMO':
                 print('****************')
                 print(item)
-    def print_promo_names(self):
-        for item in self.list_items:
-            if item.promo == 'PROMO':
-                print(item.item)
+    def get_and_save_all_promo_names(self):
+        list_ = []
+        with open(file_all_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                if item.promo == 'PROMO':
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing all the PROMO items to a file " + str(file_all_promo) + " is successful!")
+        return list_
 
-    def print_promo_OTC(self):
-        for item in self.list_items:
-            if item.promo == 'PROMO' and item.sales_method == 'ОТС':
-                print(item.item)
-    def print_promo_RX(self):
-        for item in self.list_items:
-            if item.promo == 'PROMO' and item.sales_method == 'RX':
-                print(item.item)
+    def get_and_save_list_promo_OTC(self):
+        list_ = []
+        with open(file_otc_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                if item.promo == 'PROMO' and item.sales_method == 'ОТС':
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing PROMO OTC items to a file " + str(file_rx_promo) + " is successful!")
+        return list_
+
+
+    def get_and_save_list_promo_RX(self):
+        list_ = []
+        with open(file_rx_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                if item.promo == 'PROMO' and item.sales_method == 'RX':
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing PROMO RX items to a file " + str(file_rx_promo) + " is successful!")
+        return list_
+
+
     def print_non_promo_names(self):
         for item in self.list_items:
             if item.promo == 'NON-PROMO':
@@ -107,4 +132,6 @@ class SKUworkout():
                     file_write.write('\n')
         logging.info("Writing NON-PROMO RX items to a file " + str(file_rx_non_promo) + " is successful!")
         return list_
+
+
 
