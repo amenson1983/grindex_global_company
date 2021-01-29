@@ -11,11 +11,28 @@ if __name__ == '__main__':
         list_sku = []
         for row in reader:
             row[6] = row[6].replace(',','.')
-            item = SKU(row[0], row[1], row[2], row[3], row[4], row[5], row[6])
+            item = SKU(row[0], row[1], row[2], row[3], row[4], row[5], row[6]) #row 6 is a current CIP price/ correct in file
             list_sku.append(item)
-            print(row[0], row[1],row[2],row[3],row[4],row[5],row[6])
+            #print(row[0], row[1],row[2],row[3],row[4],row[5],row[6])
         list_sku_main = list_sku[0:]
         #print(list_sku_main)
         list_sku = SKUworkout(list_sku_main)
-        list_sku.print_promo()
-
+        #list_sku.print_promo()
+        print('List of PROMO SKU:')
+        print('********************')
+        list_sku.print_promo_names()
+        print('List of PROMO OTC SKU:')
+        print('********************')
+        list_sku.print_promo_OTC()
+        print('List of PROMO RX SKU:')
+        print('********************')
+        list_sku.print_promo_RX()
+        print('List of NON-PROMO SKU:')
+        print('********************')
+        list_sku.print_non_promo_names()
+        print('List of NON-PROMO OTC SKU:')
+        print('********************')
+        list_sku.print_non_promo_OTC()
+        print('List of NON-PROMO RX SKU:')
+        print('********************')
+        list_sku.print_non_promo_RX()

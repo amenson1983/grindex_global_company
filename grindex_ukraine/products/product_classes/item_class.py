@@ -66,4 +66,29 @@ class SKUworkout():
             if item.promo == 'PROMO':
                 print('****************')
                 print(item)
+    def print_promo_names(self):
+        for item in self.list_items:
+            if item.promo == 'PROMO':
+                print(item.item)
 
+    def print_promo_OTC(self):
+        for item in self.list_items:
+            if item.promo == 'PROMO' and item.sales_method == 'ОТС':
+                print(item.item)
+    def print_promo_RX(self):
+        for item in self.list_items:
+            if item.promo == 'PROMO' and item.sales_method == 'RX':
+                print(item.item)
+    def print_non_promo_names(self):
+        for item in self.list_items:
+            if item.promo == 'NON-PROMO':
+                print(item.item)
+    def print_non_promo_OTC(self):
+        for item in self.list_items:
+            if item.promo == 'NON-PROMO' and item.sales_method == 'ОТС':
+                print(item.item)
+
+    def print_non_promo_RX(self):
+        for item in self.list_items:
+            if item.promo == 'NON-PROMO' and item.sales_method == 'RX':
+                print(item.item)
