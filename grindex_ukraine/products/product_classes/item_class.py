@@ -1,11 +1,13 @@
 from grindex_ukraine.products.product_classes.brand_class import Brand
 import logging
 import csv
+import json
 file_rx_non_promo = "rx_non_promo_list.txt"
 file_otc_non_promo = "otc_non_promo_list.txt"
 file_rx_promo = "rx_promo_list.txt"
 file_otc_promo = "otc_promo_list.txt"
 file_all_promo = "all_promo_list.txt"
+item_cip = "item_act_cip_dictionary.csv"
 
 logging.basicConfig(filename='product.log', level=logging.INFO, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 class ITEMException(Exception):
@@ -132,6 +134,23 @@ class SKUworkout():
                     file_write.write('\n')
         logging.info("Writing NON-PROMO RX items to a file " + str(file_rx_non_promo) + " is successful!")
         return list_
+
+    def get_dictionary_item_actual_cip(self):
+        dict_= {}
+        for item in self.list_items:
+            entry = {item.item:item.cip}
+            dict_.update(entry)
+        strData = json.dumps(dict_)
+        with open("item_cip_dictionary.json", "w") as file:
+            file.write(strData)
+            #with open(item_cip, "w", newline="") as file:
+                #columns = ["SKU","CIP"]
+                #writer = csv.DictWriter(file, fieldnames=columns)
+                #writer.writeheader()
+
+                # запись нескольких строк
+                #writer.writerows(dict_)
+        return dict_
 
 
 

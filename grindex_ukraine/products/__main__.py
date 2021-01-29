@@ -1,10 +1,16 @@
 import csv
-
+import json
 from dateutil.utils import today
 
 from grindex_ukraine.products.product_classes.brand_class import Brand
 from grindex_ukraine.products.product_classes.item_class import SKU, SKUworkout
 
+
+def get_dict_from_file(filename):
+    with open(filename, "r", encoding="UTF") as myfile:
+        user_str = myfile.read()
+    user_dict = json.loads(user_str)
+    return user_dict
 
 def get_items_from_csv():
     with open("items.csv", "r", encoding="UTF", newline="") as file:
@@ -22,9 +28,17 @@ def get_items_from_csv():
 if __name__ == '__main__':
     list_sku_main = get_items_from_csv()
     list_sku = SKUworkout(list_sku_main)
-    for i in list_sku_main:
-        print(i)
 
+    y = list_sku.get_dictionary_item_actual_cip()
+    for i in y.keys():
+        print(i, y[i])
+
+
+
+    #us_dict = get_dict_from_file('item_cip_dictionary.json')
+    #print(us_dict)
+    #for i in us_dict:
+        #print('SKU: ',i[0:len(i)],'\nCIP: ', us_dict[i[0:len(i)]])
 
     #list_sku.get_and_save_all_promo_names()
     #print('Save List of PROMO all the SKU`s to file is successfully completed!')
