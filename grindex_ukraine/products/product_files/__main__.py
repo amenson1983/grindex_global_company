@@ -16,4 +16,4 @@ if __name__ == '__main__':
     new_dict = {}
     for item in dictionary:
         new_dict.update(item)
-    print(new_dict, '\n',new_dict.get('Апилак №25'))
+    print(new_dict.items(), '\n',new_dict.get('Апилак №25'))

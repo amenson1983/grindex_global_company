@@ -18,4 +18,4 @@ class GrindexUkraine(Grindex):
         return f'{Grindex.__str__(self)} \nCountry Office: {self.repres_office}'
 
     def __repr__(self):
-        return f'{Grindex.__str__(self)},{self.repres_office}'
+        return f'{Grindex.__repr__(self)},{self.repres_office}'
