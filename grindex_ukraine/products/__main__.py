@@ -4,9 +4,7 @@ from grindex_ukraine.products.product_classes.brand_class import Brand
 from grindex_ukraine.products.product_classes.item_class import SKU, SKUworkout
 
 if __name__ == '__main__':
-    sku = SKU('AC Grindeks', 'AC Grindeks Ukraine','OTC','APILAK', True,'Апилак №25',5)
-
-    with open("Планы на 2021.csv", "r", encoding="UTF", newline="") as file:
+    with open("items.csv", "r", encoding="UTF", newline="") as file:
         reader = csv.reader(file,delimiter=';')
         list_sku = []
         for row in reader:
@@ -30,9 +28,9 @@ if __name__ == '__main__':
         print('List of NON-PROMO SKU:')
         print('********************')
         list_sku.print_non_promo_names()
-        print('List of NON-PROMO OTC SKU:')
-        print('********************')
-        list_sku.print_non_promo_OTC()
-        print('List of NON-PROMO RX SKU:')
-        print('********************')
-        list_sku.print_non_promo_RX()
+
+        list_sku.get_and_save_list_non_promo_RX()
+        print('Save List of NON-PROMO RX SKU to file is successfully completed!')
+        list_sku.get_and_save_list_non_promo_OTC()
+        print('Save List of NON-PROMO OTC SKU to file is successfully completed!')
+

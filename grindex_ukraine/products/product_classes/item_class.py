@@ -1,5 +1,8 @@
 from grindex_ukraine.products.product_classes.brand_class import Brand
 import logging
+import csv
+file_rx_non_promo = "rx_non_promo_list.txt"
+file_otc_non_promo = "otc_non_promo_list.txt"
 
 logging.basicConfig(filename='product.log', level=logging.INFO, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 class ITEMException(Exception):
@@ -22,8 +25,8 @@ class SKU(Brand):
     def cip(self, value):
         if float(value)>0.001:
             self.__cip = float(value)
-            logging.info("Set CIP price for item successful. Value (eur) = "+str(value))
         else: self.__cip = None
+        logging.info("Set CIP price for item successful. Value (eur) = " + str(value))
     @property
     def sales_method(self):
         return self.__sales_method
@@ -83,12 +86,25 @@ class SKUworkout():
         for item in self.list_items:
             if item.promo == 'NON-PROMO':
                 print(item.item)
-    def print_non_promo_OTC(self):
-        for item in self.list_items:
-            if item.promo == 'NON-PROMO' and item.sales_method == 'ОТС':
-                print(item.item)
+    def get_and_save_list_non_promo_OTC(self):
+        list_ = []
+        with open(file_otc_non_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                if item.promo == 'NON-PROMO' and item.sales_method == 'ОТС':
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing NON-PROMO OTC items to a file " + str(file_otc_non_promo) + " is successful!")
+        return list_
 
-    def print_non_promo_RX(self):
-        for item in self.list_items:
-            if item.promo == 'NON-PROMO' and item.sales_method == 'RX':
-                print(item.item)
+    def get_and_save_list_non_promo_RX(self):
+        list_ = []
+        with open(file_rx_non_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                if item.promo == 'NON-PROMO' and item.sales_method == 'RX':
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing NON-PROMO RX items to a file " + str(file_rx_non_promo) + " is successful!")
+        return list_
+
