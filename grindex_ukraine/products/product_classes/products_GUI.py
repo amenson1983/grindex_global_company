@@ -1,10 +1,13 @@
-
+import csv
 import logging
 import json
 import tkinter
 import tkinter.font
 import tkinter.messagebox
-from grindex_ukraine.products.product_classes.brand_class import Brand
+
+from dateutil.utils import today
+
+from grindex_ukraine.products.product_classes.item_class import SKU
 
 file_rx_non_promo = "rx_non_promo_list.txt"
 file_otc_non_promo = "otc_non_promo_list.txt"
@@ -12,65 +15,40 @@ file_rx_promo = "rx_promo_list.txt"
 file_otc_promo = "otc_promo_list.txt"
 file_all_promo = "all_promo_list.txt"
 item_cip = "item_act_cip_dictionary.csv"
+csv_file = "../products/items.csv"
+
+def get_items_from_csv_():
+    with open(csv_file, "r", encoding="UTF", newline="") as file:
+        reader = csv.reader(file, delimiter=';')
+        list_sku = []
+        for row in reader:
+            row[5 + int(today().month)] = row[5 + int(today().month)].replace(',', '.')
+            item = SKU(row[0], row[1], row[2], row[3], row[4], row[5],
+                       row[5 + int(today().month)])  # row 6 is a current CIP price/ correct in file
+            list_sku.append(item)
+            # print(row[0], row[1],row[2],row[3],row[4],row[5],row[6])
+        list_sku_main = list_sku[0:]
+    return list_sku_main
 
 logging.basicConfig(filename='product.log', level=logging.INFO, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
+
 class ITEMException(Exception):
     def __init__(self, str_err):
         Exception.__init__(self,str_err)
 
-class SKU(Brand):
-    def __init__(self,company_name,repres_office,sales_method,brand,promo,item,cip):
-        Brand.__init__(self,company_name,repres_office,brand)
-        self.sales_method = sales_method
-        self.cip = cip
-        self.item = item
-        self.promo = promo
 
-    @property
-    def cip(self):
-        return self.__cip
-
-    @cip.setter
-    def cip(self, value):
-        if float(value)>0.001:
-            self.__cip = float(value)
-        else: self.__cip = None
-        logging.info("Set CIP price for item successful. Value (eur) = " + str(value))
-    @property
-    def sales_method(self):
-        return self.__sales_method
-
-    @sales_method.setter
-    def sales_method(self, value):
-        self.__sales_method = value
-
-
-
-    @property
-    def promo(self):
-        return self.__promo
-
-    @promo.setter
-    def promo(self, value):
-        if value == 'True':
-            self.__promo = 'PROMO'
-        else: self.__promo = 'NON-PROMO'
-
-    @property
-    def item(self):
-        return self.__item
-
-    @item.setter
-    def item(self, value):
-        self.__item = value
-
-    def __str__(self):
-        return f"{Brand.__str__(self)} \nSales method: {self.sales_method} \nPROMO: {self.promo} \nSKU: {self.item} \nCIP: {self.cip}"
-    def __repr__(self):
-        return f"{Brand.__repr__(self)},{self.sales_method},{self.promo},{self.item},{self.cip}"
-class SKUworkout():
+class SKUworkoutGUI():
     def __init__(self, list_items):
         self.list_items = list_items
+        self.main_window = tkinter.Tk()
+        my_font = tkinter.font.Font(family='Arial', size=12)
+        self.top_frame = tkinter.Frame(self.main_window)
+        self.bottom_frame = tkinter.Frame(self.main_window)
+        self.button_frame = tkinter.Frame(self.main_window)
+        self.radio_var = tkinter.IntVar()
+        self.radio_var.set(1)
+
+        tkinter.mainloop()
 
     def print_promo(self):
         for item in self.list_items:
@@ -154,7 +132,4 @@ class SKUworkout():
                 # запись нескольких строк
                 #writer.writerows(dict_)
         return dict_
-
-
-
 
