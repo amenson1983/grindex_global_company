@@ -52,9 +52,7 @@ class SKU(Brand):
 
     @promo.setter
     def promo(self, value):
-        if value == 'True':
-            self.__promo = 'PROMO'
-        else: self.__promo = 'NON-PROMO'
+        self.__promo = value
 
     @property
     def item(self):
@@ -72,16 +70,17 @@ class SKUworkout():
     def __init__(self, list_items):
         self.list_items = list_items
 
+
     def print_promo(self):
         for item in self.list_items:
-            if item.promo == 'PROMO':
+            if item.promo == 'True':
                 print('****************')
                 print(item)
     def get_and_save_all_promo_names(self):
         list_ = []
         with open(file_all_promo, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
-                if item.promo == 'PROMO':
+                if item.promo == 'True':
                     file_write.write(item.item)
                     list_.append(item.item)
                     file_write.write('\n')
@@ -92,7 +91,7 @@ class SKUworkout():
         list_ = []
         with open(file_otc_promo, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
-                if item.promo == 'PROMO' and item.sales_method == 'ОТС':
+                if item.promo == 'True' and item.sales_method == 'ОТС':
                     file_write.write(item.item)
                     list_.append(item.item)
                     file_write.write('\n')
@@ -104,7 +103,7 @@ class SKUworkout():
         list_ = []
         with open(file_rx_promo, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
-                if item.promo == 'PROMO' and item.sales_method == 'RX':
+                if item.promo == 'True' and item.sales_method == 'RX':
                     file_write.write(item.item)
                     list_.append(item.item)
                     file_write.write('\n')
@@ -114,13 +113,13 @@ class SKUworkout():
 
     def print_non_promo_names(self):
         for item in self.list_items:
-            if item.promo == 'NON-PROMO':
+            if item.promo == 'False':
                 print(item.item)
     def get_and_save_list_non_promo_OTC(self):
         list_ = []
         with open(file_otc_non_promo, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
-                if item.promo == 'NON-PROMO' and item.sales_method == 'ОТС':
+                if item.promo == 'False' and item.sales_method == 'ОТС':
                     file_write.write(item.item)
                     list_.append(item.item)
                     file_write.write('\n')
@@ -131,7 +130,7 @@ class SKUworkout():
         list_ = []
         with open(file_rx_non_promo, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
-                if item.promo == 'NON-PROMO' and item.sales_method == 'RX':
+                if item.promo == 'False' and item.sales_method == 'RX':
                     file_write.write(item.item)
                     list_.append(item.item)
                     file_write.write('\n')
