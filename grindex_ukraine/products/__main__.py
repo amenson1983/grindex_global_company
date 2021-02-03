@@ -40,11 +40,11 @@ class Example(Frame):
 
         acts = list_e
         self.ok_button = tkinter.Button(self.button_frame, text='Show info', command=self.onclick)
-        self.ok_button.pack(side='left')
+        self.ok_button.pack(side='top')
         self.quit_button = tkinter.Button(self.button_frame, text='Quit', command=self.master.destroy)
         self.quit_button.pack(side='left')
         self.button_frame.pack()
-        lb = Listbox(self)
+        lb = Listbox(self,width='70',height='15')
 
         for i in acts:
             lb.insert(END, i)
@@ -80,7 +80,7 @@ class Example(Frame):
 def list_work():
     root = Tk()
     ex = Example()
-    root.geometry("400x300")
+    root.geometry("500x400")
     root.mainloop()
 
 
