@@ -90,7 +90,7 @@ class SKUworkout():
 
     def get_and_save_all_sku(self):
         list_ = []
-        with open(file_all_promo, "w", encoding="UTF", newline="") as file_write:
+        with open(file_all, "w", encoding="UTF", newline="") as file_write:
             for item in self.list_items:
                     file_write.write(item.item)
                     list_.append(item.item)
