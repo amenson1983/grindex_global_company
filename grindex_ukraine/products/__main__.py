@@ -26,21 +26,21 @@ from tkinter import Tk, BOTH, Listbox, StringVar, END
 from tkinter.ttk import Frame, Label
 
 
-class Example(Frame):
+class Items_cip_GUI(Frame):
 
     def __init__(self):
         super().__init__()
         self.initUI()
 
     def initUI(self):
-        self.master.title("PROMO ITEMS CIP PRICES")
+        self.master.title( "ITEMS` CIP PRICE")
         self.pack(fill=BOTH, expand=1)
         self.button_frame = tkinter.Frame(self.master)
 
 
         acts = list_e
         self.ok_button = tkinter.Button(self.button_frame, text='Show info', command=self.onclick)
-        self.ok_button.pack(side='top')
+        self.ok_button.pack(side='left')
         self.quit_button = tkinter.Button(self.button_frame, text='Quit', command=self.master.destroy)
         self.quit_button.pack(side='left')
         self.button_frame.pack()
@@ -79,8 +79,8 @@ class Example(Frame):
 
 def list_work():
     root = Tk()
-    ex = Example()
-    root.geometry("500x400")
+    ex = Items_cip_GUI()
+    root.geometry("500x350")
     root.mainloop()
 
 
@@ -92,12 +92,11 @@ def list_work():
 
 if __name__ == '__main__':
     sku_ = SKUworkout(list_items)
-    list_ = sku_.get_and_save_all_promo_names()
+    list_ = sku_.get_and_save_all_sku()
     dict = sku_.get_dictionary_item_actual_cip()
     list_e = []
     for item in list_:
         list_e.append(item)
-    print(list_e)
     list_work()
 
 

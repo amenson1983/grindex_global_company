@@ -12,6 +12,7 @@ file_rx_promo = "rx_promo_list.txt"
 file_otc_promo = "otc_promo_list.txt"
 file_all_promo = "all_promo_list.txt"
 item_cip = "item_act_cip_dictionary.csv"
+file_all = "all_sku_list.txt"
 
 logging.basicConfig(filename='product.log', level=logging.INFO, format='%(asctime)s %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p')
 class ITEMException(Exception):
@@ -85,6 +86,16 @@ class SKUworkout():
                     list_.append(item.item)
                     file_write.write('\n')
         logging.info("Writing all the PROMO items to a file " + str(file_all_promo) + " is successful!")
+        return list_
+
+    def get_and_save_all_sku(self):
+        list_ = []
+        with open(file_all_promo, "w", encoding="UTF", newline="") as file_write:
+            for item in self.list_items:
+                    file_write.write(item.item)
+                    list_.append(item.item)
+                    file_write.write('\n')
+        logging.info("Writing all the items to a file " + str(file_all_promo) + " is successful!")
         return list_
 
     def get_and_save_list_promo_OTC(self):
