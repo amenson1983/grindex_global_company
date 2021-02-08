@@ -1,87 +1,88 @@
-﻿0;0;RX;AZITHROMYCIN;False;Азитромицин Гриндекс табл. 500мг №3;3,3;3,3;3,3;3,3;3,3;3,3;3,3;3,3;3,3;3,3;3,3;3,3
-0;0;RX;AXASTROL;False;Аксастрол;35;35;35;35;35;35;35;35;35;35;35;35
-0;0;ОТС;APILAK;False;Апилак ,  мазь, 10мг/г, 50г в тубе;2,91;2,91;2,91;2,91;2,91;2,91;2,91;2,91;2,91;2,91;2,91;2,91
-0;0;ОТС;APILAK;True;Апилак №25;5;5;5;5;5;5;5;5;5;5;5;5
-0;0;ОТС;APILAK;True;Апилак №50;8;8;8;8;8;8;8;8;8;8;8;8
-0;0;RX;BICALUTAMID;False;Ареклок;40;40;40;40;40;40;40;40;40;40;40;40
-0;0;RX;ATRACURIUM;False;Атракурий Калцекс ,р-р д/ин, 10мг/мл по 5 мл в ампулах №5;9;9;9;9;9;9;9;9;9;9;9;9
-0;0;RX;ATRACURIUM;False;Атракурий Калцекс, р-р д/ин, 10мг/мл по 2,5мл в ампулах №5;6;6;6;6;6;6;6;6;6;6;6;6
-0;0;RX;DEXKETOPROFEN;True;Ауксилен®,  25 мг/2 мл №5;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8
-0;0;RX;DEXKETOPROFEN;True;Ауксилен®,  50 мг/2 мл по 2 мл в ампулах №5;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8;4,8
-0;0;RX;BENZILBENZOAT;False;Бензилбензоат мазь 200мг/г 30г в тубе;1,68;1,68;1,68;1,68;1,68;1,68;1,68;1,68;1,68;1,68;1,68;1,68
-0;0;RX;BETAMAK;False;Бетамакс 100 мг. № 30;5;5;5;5;5;5;5;5;5;5;5;5
-0;0;RX;BETAMAK;False;Бетамакс 200 мг. № 30;6,3;6,3;6,3;6,3;6,3;6,3;6,3;6,3;6,3;6,3;6,3;6,3
-0;0;RX;BETAMAK;False;Бетамакс 50 мг. №30;4,2;4,2;4,2;4,2;4,2;4,2;4,2;4,2;4,2;4,2;4,2;4,2
-0;0;RX;BISAKODIL;False;Бисакодил, табл, покр. кишечнораств обол, 5мг  №40 в блистерах;1,6;1,6;1,6;1,6;1,6;1,6;1,6;1,6;1,6;1,6;1,6;1,6
-0;0;RX;BROMHEKSIN;False;Бромгексин, сироп 4мг/5мл во флак. по 100мл №1;2;2;2;2;2;2;2;2;2;2;2;2
-0;0;RX;BUPIVACAINE;False;Бупивакаин Спинал р-р для инъекций 5мг/мл 10 мл. №5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;BUPIVACAINE;False;Бупивакаин Спинал р-р для инъекций 5мг/мл 4 мл. №5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;ОТС;BEGSAN-VALUSAL;False;Валусал гель 50г;3,45;3,45;3,45;3,45;3,45;3,45;3,45;3,45;3,45;3,45;3,45;3,45
-0;0;RX;VARFAREKS-VARFARIN;False;Варфарекс таблетки по 3 мг № 100;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49
-0;0;RX;VARFAREKS-VARFARIN;False;Варфарекс таблетки по 5 мг № 100;4,24;4,24;4,24;4,24;4,24;4,24;4,24;4,24;4,24;4,24;4,24;4,24
-0;0;RX;VARFAREKS-VARFARIN;False;Варфарекс®, табл. по 3мг N30 в контейнере;1,85;1,85;1,85;1,85;1,85;1,85;1,85;1,85;1,85;1,85;1,85;1,85
-0;0;RX;VARFAREKS-VARFARIN;False;Варфарекс®, табл. по 5мг N30 в контейнере;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49;3,49
-0;0;RX;VENLAXOR;True;Венлаксор®, таблетки по 37,5 мг N 30;9,68;9,68;9,68;9,68;9,68;9,68;9,68;9,68;9,68;9,68;9,68;9,68
-0;0;RX;VENLAXOR;True;Венлаксор®, таблетки по 75 мг N 30;17;17;17;17;17;17;17;17;17;17;17;17
-0;0;ОТС;VIPROSAL;True;ВИПРОСАЛ В®, мазь, 75г в тубе;6,5;6,5;6,5;6,5;6,5;6,5;6,5;6,5;6,5;6,5;6,5;6,5
-0;0;ОТС;VIPROSAL;True;Випросал мазь 30г;3,5;3,5;3,5;3,5;3,5;3,5;3,5;3,5;3,5;3,5;3,5;3,5
-0;0;ОТС;VIPROSAL;True;Випросал мазь 50г;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5
-0;0;ОТС;HERBASTRESS;False;Гербастресс найт капс. №20;6;6;6;6;6;6;6;6;6;6;6;6
-0;0;ОТС;HERBASTRESS;False;Гербастресс табл. N10 блистер;3,8;3,8;3,8;3,8;3,8;3,8;3,8;3,8;3,8;3,8;3,8;3,8
-0;0;ОТС;HERBASTRESS;False;Гербастресс табл. №30;6;6;6;6;6;6;6;6;6;6;6;6
-0;0;ОТС;HERBASTRESS;False;ГЕРБАСТРЕСС®, бальзам по 100 мл во флаконе с крышкой и мерным пластмассовым стаканчиком;6;6;6;6;6;6;6;6;6;6;6;6
-0;0;RX;URSO;False;Гринтерол 250 №100;31;31;31;31;31;31;31;31;31;31;31;31
-0;0;RX;URSO;False;Гринтерол 250 №50;16,2;16,2;16,2;16,2;16,2;16,2;16,2;16,2;16,2;16,2;16,2;16,2
-0;0;RX;DEZAMINOOKS;False;Дезаминоокситоцин табл. 50МЕ N10;8;8;8;8;8;8;8;8;8;8;8;8
-0;0;RX;EXEMESTAN;False;Екземестан 25мг №30;24;24;24;24;24;24;24;24;24;24;24;24
-0;0;RX;IVABRADINE;False;Ивакард таблетки по 5 мг № 56;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35
-0;0;RX;IVABRADINE;False;Ивакард таблетки по 7,5 мг № 56;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35;7,35
-0;0;RX;IMATINIB;False;Иматиниб;100;100;100;100;100;100;100;100;100;100;100;100
-0;0;RX;IPIDAKRIN;True;Ипигрикс 15мг/мл;22;22;22;22;22;22;22;22;22;22;22;22
-0;0;RX;IPIDAKRIN;True;Ипигрикс 5мг/мл;15,7;15,7;15,7;15,7;15,7;15,7;15,7;15,7;15,7;15,7;15,7;15,7
-0;0;RX;IPIDAKRIN;True;Ипигрикс таб. 20мг №50;16;16;16;16;16;16;16;16;16;16;16;16
-0;0;ОТС;KAPSIKAM;True;Капсикам мазь 30г;4,5;4,5;4,5;4,5;4,5;4,5;4,5;4,5;4,5;4,5;4,5;4,5
-0;0;ОТС;KAPSIKAM;True;Капсикам мазь 50г;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5
-0;0;ОТС;KAPSIKAM;True;КАПСИКАМ, обезболивающий гидрогелевый пластырь №12 в упаковке;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07
-0;0;ОТС;KAPSIKAM;True;Капсикам обез.гидрогел.пластырь №12 Акция;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07;4,07
-0;0;RX;KETOROLAC;False;Кеторолак-грин.ин30МГ/мл1мл#10;4,95;4,95;4,95;4,95;4,95;4,95;4,95;4,95;4,95;4,95;4,95;4,95
-0;0;RX;CLARITHROMYCIN;False;Кларитромицин Гриндекс табл. 500мг №14;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5;5,5
-0;0;RX;LEVETIRACETAM;False;Леветирацетам раствор;20;20;20;20;20;20;20;20;20;20;20;20
-0;0;RX;LEVETIRACETAM;False;Леветирацетам таб 250 мг;6;6;6;6;6;6;6;6;6;6;6;6
-0;0;RX;LEVETIRACETAM;False;Леветирацетам таб 500 мг;15;15;15;15;15;15;15;15;15;15;15;15
-0;0;RX;LOPERAMID;False;Лоперамид Гриндекс капс.2мг N 10;1,8;1,8;1,8;1,8;1,8;1,8;1,8;1,8;1,8;1,8;1,8;1,8
-0;0;ОТС;MILDRONAT;True;Милдронат 250 мг №40;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52
-0;0;RX;MILDRONAT;True;Милдронат 5 мл №10;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1
-0;0;RX;MILDRONAT;True;Милдронат 500 мг №60;17,27;17,27;17,27;17,27;17,27;17,27;17,27;17,27;17,27;17,27;17,27;17,27
-0;0;RX;MILDRONAT;True;Милдронат GX таб.500мг №60;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1;18,1
-0;0;ОТС;MILDRONAT;True;Милдронат капс. 250мг N40 (10х4) Акция;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52;9,52
-0;0;RX;MILDRONAT;True;Милдронат®, р-р для/ин, 0.5г/5мл по 5мл в ампулах N20 (5х2);27,78;27,78;27,78;27,78;27,78;27,78;27,78;27,78;27,78;27,78;27,78;27,78
-0;0;RX;ARIPIPRAZOL;False;МИРИУМ®, табл. 15 мг, №28 в блистерах;10;10;10;10;10;10;10;10;10;10;10;10
-0;0;RX;B-VITAMIN;True;Нейраксин В р-р для/ин., 2 мл. № 25;16,22;16,22;16,22;16,22;16,22;16,22;16,22;16,22;16,22;16,22;16,22;16,22
-0;0;RX;B-VITAMIN;True;Нейраксин В р-р для/ин., 2 мл. № 5;4;4;4;4;4;4;4;4;4;4;4;4
-0;0;ОТС;NEXOVIT;False;Нексовит D3 caps. 1000 IU №60;5,35;5,35;5,35;5,35;5,35;5,35;5,35;5,35;5,35;5,35;5,35;5,35
-0;0;ОТС;NEXOVIT;False;Нексовит D3 caps. 2000 IU №60;8,7;8,7;8,7;8,7;8,7;8,7;8,7;8,7;8,7;8,7;8,7;8,7
-0;0;ОТС;RECREOL;True;Рекреол®, крем, 50 мг/г по 30 г в тубе;4;4;4;4;4;4;4;4;4;4;4;4
-0;0;ОТС;RECREOL;True;Рекреол®, крем, 50 мг/г по 50 г в тубе;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1
-0;0;ОТС;RECREOL;True;Рекреол®, мазь, 50 мг/г по 30 г в тубе;4;4;4;4;4;4;4;4;4;4;4;4
-0;0;ОТС;RECREOL;True;Рекреол®, мазь, 50 мг/г по 50 г в тубе;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1;4,1
-0;0;RX;RISPAXOL;True;Риспаксол®, таблетки покрытые оболочкой 2мг №20;6,93;6,93;6,93;6,93;6,93;6,93;6,93;6,93;6,93;6,93;6,93;6,93
-0;0;RX;RISPAXOL;True;Риспаксол®, таблетки покрытые оболочкой 2мг №60;13,86;13,86;13,86;13,86;13,86;13,86;13,86;13,86;13,86;13,86;13,86;13,86
-0;0;RX;RISPAXOL;True;Риспаксол®, таблетки покрытые оболочкой 4мг №60;20,79;20,79;20,79;20,79;20,79;20,79;20,79;20,79;20,79;20,79;20,79;20,79
-0;0;RX;SOMNOL_ZOPIKLON;True;Сомнолс таблетки по 7,5 мг №10;2,3;2,3;2,3;2,3;2,3;2,3;2,3;2,3;2,3;2,3;2,3;2,3
-0;0;RX;SOMNOL_ZOPIKLON;False;Сомнолс таблетки по 7,5 мг №20;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;SULFARGIN;True;Сульфаргин мазь 50г;6,6;6,6;6,6;6,6;6,6;6,6;6,6;6,6;6,6;6,6;6,6;6,6
-0;0;RX;MEMANTIN;True;Тингрекс® табл, покр. п/о, 10 мг N30;13;13;13;13;13;13;13;13;13;13;13;13
-0;0;RX;MEMANTIN;True;Тингрекс® табл, покр. п/о, 10 мг N60;19;19;19;19;19;19;19;19;19;19;19;19
-0;0;RX;MEMANTIN;True;Тингрекс® табл, покр. п/о, 10 мг N90;27;27;27;27;27;27;27;27;27;27;27;27
-0;0;RX;FTORAFUR;False;Фторафур®, капсулы по 400 мг N100;100;100;100;100;100;100;100;100;100;100;100;100
-0;0;ОТС;VIPROSAL;True;Випросал Б мазь 75г в тубе АКЦИЯ;0,01;0,01;0,01;0,01;0,01;0,01;0,01;0,01;0,01;0,01;0,01;0,01
-0;0;RX;TAMIPUL;False;Tamipul kaps. N10;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;TAMIPUL;False;Tetramol kaps. N30;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;DIAZEPEK;False;Diazepeks inj. 0.5% 2ml N10;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;MORFIN;False;Morfīna hidr.inj. 1% 1ml N5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;PROMEDOL;False;Promedols inj. 2% 1ml N5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;TRAMADOL;False;Tramadol inj. 50mg/ml 2ml N10;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;FENTANIL;False;Fentanils-c. in. 0.005% 2ml N5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;OXYCODONE;False;Oxycodone 10mg/ml 1ml N5;0;0;0;0;0;0;0;0;0;0;0;0
-0;0;RX;OXYCODONE;False;Oxycodone 10mg/ml 2ml N5;0;0;0;0;0;0;0;0;0;0;0;0
+﻿item_id;promotion;classification;name_domestic;name_sales_report;name_translit;brand;cip
+1;NON-PROMO;ANTIBIOTICS;Азитромицин Гриндекс табл. 500мг №3;Azythromycin  tab. 500mg №3;Azithromycin Gr. tab. 500mg N3;AZITHROMYCIN;3,3
+2;NON-PROMO;ONCO;Аксастрол;Axastrol tab. 1mg N28;Axastrol tab. 1mg N28;AXASTROL;35
+3;NON-PROMO;NATURAL;Апилак ,  мазь, 10мг/г, 50г в тубе;Apilaks ziede 3% 50g;Apilaks ziede 50g;APILAK;2,91
+4;PROMO;NATURAL;Апилак №25;Apilaks tab. 10mg N25;Apilaks tab. 10mg N25;APILAK;5
+5;PROMO;NATURAL;Апилак №50;Apilaks tab. 10mg N50;Apilaks tab. 10mg N50;APILAK;8
+6;NON-PROMO;ONCO;Ареклок;Areklok tab. 50mg N30;Areklok tab. 50mg N30;BICALUTAMID;40
+7;NON-PROMO;RT;Атракурий Калцекс ,р-р д/ин, 10мг/мл по 5 мл в ампулах №5;Atracurium 5 №5;Atracurium 10mg/ml 5ml N5;ATRACURIUM;9
+8;NON-PROMO;RT;Атракурий Калцекс, р-р д/ин, 10мг/мл по 2,5мл в ампулах №5;Atracurium 2,5 №5;Atracurium 10mg/ml 2.5ml N5;ATRACURIUM;6
+9;NON-PROMO;PAIN;Ауксилен®,  25 мг/2 мл №5;Auxilen 25mg/ml 2ml N5 ;Auxilen 25mg/ml 2ml N5;DEXKETOPROFEN;4,8
+10;PROMO;PAIN;Ауксилен®,  50 мг/2 мл по 2 мл в ампулах №5;Auxilen 50mg/ml 2ml N5;Auxilen 50mg/ml 2ml N5;DEXKETOPROFEN;4,8
+11;NON-PROMO;TOPICAL/DERMA;Бензилбензоат мазь 200мг/г 30г в тубе;Benzilbenzoāta ziede 20% 30g;Benzilbenzoāta ziede 20% 30g;BENZILBENZOAT;1,68
+12;NON-PROMO;PSYCHO;Бетамакс 100 мг. № 30;Betamaks tab. 100mg N30 TN;Betamaks tab. 100mg N30 TN;BETAMAK;5
+13;NON-PROMO;PSYCHO;Бетамакс 200 мг. № 30;Betamaks tab. 200mg N30 TN;Betamaks tab. 200mg N30 TN;BETAMAK;6,3
+14;NON-PROMO;PSYCHO;Бетамакс 50 мг. №30;Betamaks tab. 50mg N30 TN;Betamaks tab. 50mg N30 TN;BETAMAK;4,2
+15;NON-PROMO;GASTRO;Бисакодил, табл, покр. кишечнораств обол, 5мг  №40 в блистерах;Bisakodils tab. 5mg N40;Bisakodils tab. 5mg N40;BISAKODIL;1,6
+16;NON-PROMO;OTHER;Бромгексин, сироп 4мг/5мл во флак. по 100мл №1;Bromheksins sir.;Bromheksins sir. 100ml;BROMHEKSIN;2
+17;NON-PROMO;OTHER;Бупивакаин Спинал р-р для инъекций 5мг/мл 10 мл. №5;Bupivacaine 5mg/ml 10ml N5;Bupivacaine 5mg/ml 10ml N5;BUPIVACAINE;0
+18;NON-PROMO;OTHER;Бупивакаин Спинал р-р для инъекций 5мг/мл 4 мл. №5;Bupivacaine Spinal5mg/ml 4mlN5;Bupivacaine Spinal5mg/ml 4mlN5;BUPIVACAINE;0
+19;NON-PROMO;PAIN;Валусал гель 50г;Valusal gel 50g;Valusal 2.5% gels 50g;BEGSAN-VALUSAL;3,45
+20;NON-PROMO;CARDIO;Варфарекс таблетки по 3 мг № 100;Varfareks tab. 3mg N100;Varfareks tab. 3mg N100;VARFAREKS-VARFARIN;3,49
+21;NON-PROMO;CARDIO;Варфарекс таблетки по 5 мг № 100;Varfareks tab. 5mg N100;Varfareks tab. 5mg N100;VARFAREKS-VARFARIN;4,24
+22;NON-PROMO;CARDIO;Варфарекс®, табл. по 3мг N30 в контейнере;Varfareks tab. 3mg N30;Varfareks tab. 3mg N30;VARFAREKS-VARFARIN;1,85
+23;NON-PROMO;CARDIO;Варфарекс®, табл. по 5мг N30 в контейнере;Varfareks tab. 5mg N30;Varfareks tab. 5mg N30;VARFAREKS-VARFARIN;3,49
+24;PROMO;PSYCHO;Венлаксор®, таблетки по 37,5 мг N 30;Venlaxor tab. 37,5mg N30;Venlaxor tab. 37,5mg N30;VENLAXOR;9,68
+25;PROMO;PSYCHO;Венлаксор®, таблетки по 75 мг N 30;Venlaxor tab. 75mg N30;Venlaxor tab. 75mg N30;VENLAXOR;17
+26;PROMO;TOPICAL/DERMA;ВИПРОСАЛ В®, мазь, 75г в тубе;Viprosāls B ziede 75g;Viprosāls B ziede 75g;VIPROSAL;6,5
+27;PROMO;TOPICAL/DERMA;Випросал мазь 30г;Viprosāls B ziede 30g;Viprosāls B ziede 30g;VIPROSAL;3,5
+28;PROMO;TOPICAL/DERMA;Випросал мазь 50г;Viprosāls B ziede 50g;Viprosāls B ziede 50g;VIPROSAL;5,5
+29;NON-PROMO;NATURAL;Гербастресс найт капс. №20;Herbastress Ночь №20;Herbastress miegam kaps. N20;HERBASTRESS;6
+30;NON-PROMO;NATURAL;Гербастресс табл. N10 блистер;Herbastress №10;Herbastress tab. N10;HERBASTRESS;3,8
+31;NON-PROMO;NATURAL;Гербастресс табл. №30;Herbastress;Herbastress tab. N30;HERBASTRESS;6
+32;NON-PROMO;NATURAL;ГЕРБАСТРЕСС®, бальзам по 100 мл во флаконе с крышкой и мерным пластмассовым стаканчиком;Herbastress balzams 100ml;Herbastress balzams 100ml;HERBASTRESS;6
+33;NON-PROMO;GASTRO;Гринтерол 250 №100;Grinterol kaps. 250mg N100;Grinterol kaps. 250mg N100;URSO;31
+34;NON-PROMO;GASTRO;Гринтерол 250 №50;Grinterol kaps. 250mg N50;Grinterol kaps. 250mg N50;URSO;16,2
+35;NON-PROMO;GYNECOLOGY;Дезаминоокситоцин табл. 50МЕ N10;Dezaminooksitocīns tab.50SvN10;Dezaminooksitocīns tab.50SvN10;DEZAMINOOKS;8
+36;NON-PROMO;ONCO;Екземестан 25мг №30;Exemestan tab. 25mg N30;Exemestan tab. 25mg N30;EXEMESTAN;24
+37;NON-PROMO;CARDIO;Ивакард таблетки по 5 мг № 56;Ivakard tab. 5mg N56;Ivakard tab. 5mg N56;IVABRADINE;7,35
+38;NON-PROMO;CARDIO;Ивакард таблетки по 7,5 мг № 56;Ivakard tab. 7.5mg N56;Ivakard tab. 7.5mg N56;IVABRADINE;7,35
+39;NON-PROMO;ONCO;Иматиниб;Imatinib 100mg №120;Imatinib kaps.100mg N120;IMATINIB;100
+40;PROMO;NEURO;Ипигрикс 15мг/мл;Ipigrix inj. 15mg/ml N10;Ipigrix inj. 15mg/ml N10;IPIDAKRIN;22
+41;PROMO;NEURO;Ипигрикс 5мг/мл;Ipigrix inj. 5mg/ml N10;Ipigrix inj. 5mg/ml N10;IPIDAKRIN;15,7
+42;PROMO;NEURO;Ипигрикс таб. 20мг №50;Ipigrix tab. 20mg N50;Ipigrix tab. 20mg N50;IPIDAKRIN;16
+43;PROMO;TOPICAL/DERMA;Капсикам мазь 30г;Kapsikama ziede 30g;Kapsikama ziede 30g;KAPSIKAM;4,5
+44;PROMO;TOPICAL/DERMA;Капсикам мазь 50г;Kapsikama ziede 50g;Kapsikama ziede 50g;KAPSIKAM;5,5
+45;PROMO;TOPICAL/DERMA;КАПСИКАМ, обезболивающий гидрогелевый пластырь №12 в упаковке;Kapsikam plāksteris N12;Kapsikam plāksteris N12;KAPSIKAM;4,07
+46;PROMO;TOPICAL/DERMA;Капсикам обез.гидрогел.пластырь №12 Акция;Kapsikam plāksteris N12;Kapsikam plāksteris N12;KAPSIKAM;4,07
+47;NON-PROMO;PAIN;Кеторолак-грин.ин30МГ/мл1мл#10;Ketorolac 30mg/1ml 1ml N10;Ketorolac-Gr.30mg/ml 1ml N10;KETOROLAC;4,95
+48;NON-PROMO;ANTIBIOTICS;Кларитромицин Гриндекс табл. 500мг №14;Clarithromycin tab. 500mg N14;Clarithromycin tab. 500mg N14;CLARITHROMYCIN;5,5
+49;NON-PROMO;NEURO;Леветирацетам раствор;Levetiracetam s.100mg/ml 300ml  ;Levetiracetam s.100mg/ml 300ml;LEVETIRACETAM;20
+50;NON-PROMO;NEURO;Леветирацетам таб 250 мг;Levetiracetam tab 250mg;Levetiracetam tab. 250mg N30;LEVETIRACETAM;6
+51;NON-PROMO;NEURO;Леветирацетам таб 500 мг;Levetiracetam tab 500mg;Levetiracetam tab. 500mg N30;LEVETIRACETAM;15
+52;NON-PROMO;GASTRO;Лоперамид Гриндекс капс.2мг N 10;Loperamid kaps.2mg №10;Loperamīds kaps. 2mg N10;LOPERAMID;1,8
+53;PROMO;MILDRONAT;Милдронат 250 мг №40;Mildronāts kaps. 250mg N40;Mildronāts kaps. 250mg N40 OTC;MILDRONAT;9,52
+54;PROMO;MILDRONAT;Милдронат 5 мл №10;Mildronāts inj. 10% 5ml N10;Mildronāts inj. 10% 5ml N10;MILDRONAT;18,1
+55;PROMO;MILDRONAT;Милдронат 500 мг №60;Mildronāts kaps. 500mg N60;Mildronāts kaps. 500mg N60;MILDRONAT;17,27
+56;PROMO;MILDRONAT;Милдронат GX таб.500мг №60;Mildronate GX tab. 500mg N60;Mildronate GX tab. 500mg N60;MILDRONAT;18,1
+57;PROMO;MILDRONAT;Милдронат капс. 250мг N40 (10х4) Акция;Mildronāts kaps. 250mg N40;Mildronāts kaps. 250mg N40 OTC;MILDRONAT;9,52
+58;PROMO;MILDRONAT;Милдронат®, р-р для/ин, 0.5г/5мл по 5мл в ампулах N20 (5х2);Mildronāts inj. 10% 5ml N20;Mildronāts inj. 10% 5ml N20;MILDRONAT;27,78
+59;NON-PROMO;PSYCHO;МИРИУМ®, табл. 15 мг, №28 в блистерах;Mirium 15mg tab. N28;Mirium 15mg tab. N28;ARIPIPRAZOL;10
+60;PROMO;NEURO;Нейраксин В р-р для/ин., 2 мл. № 25;Neiraxin B, 2ml № 25;Neiraxin B 2ml N25;B-VITAMIN;16,22
+61;PROMO;NEURO;Нейраксин В р-р для/ин., 2 мл. № 5;Neiraxin B, 2ml № 5;Neiraxin B 2ml N5;B-VITAMIN;4
+62;NON-PROMO;OTHER;Нексовит D3 caps. 1000 IU №60;Nexovit D3 caps. 1000 IU N60;Nexovit D3 caps. 1000 IU N60;NEXOVIT;5,35
+63;NON-PROMO;OTHER;Нексовит D3 caps. 2000 IU №60;Nexovit D3 caps. 2000 IU N60;Nexovit D3 caps. 2000 IU N60;NEXOVIT;8,7
+64;PROMO;TOPICAL/DERMA;Рекреол®, крем, 50 мг/г по 30 г в тубе;Recreol 5% krēms 30g;Recreol 5% krēms 30g;RECREOL;4
+65;PROMO;TOPICAL/DERMA;Рекреол®, крем, 50 мг/г по 50 г в тубе;Recreol 5% krēms 50g;Recreol 5% krēms 50g;RECREOL;4,1
+66;PROMO;TOPICAL/DERMA;Рекреол®, мазь, 50 мг/г по 30 г в тубе;Recreol 5% ziede 30g;Recreol 5% ziede 30g;RECREOL;4
+67;PROMO;TOPICAL/DERMA;Рекреол®, мазь, 50 мг/г по 50 г в тубе;Recreol 5% ziede 50g;Recreol 5% ziede 50g;RECREOL;4,1
+68;PROMO;PSYCHO;Риспаксол®, таблетки покрытые оболочкой 2мг №20;Rispaxol tab. 2mg N20;Rispaxol tab. 2mg N20;RISPAXOL;6,93
+69;PROMO;PSYCHO;Риспаксол®, таблетки покрытые оболочкой 2мг №60;Rispaxol tab. 2mg N60;Rispaxol tab. 2mg N60;RISPAXOL;13,86
+70;PROMO;PSYCHO;Риспаксол®, таблетки покрытые оболочкой 4мг №60;Rispaxol tab. 4mg N60;Rispaxol tab. 4mg N60;RISPAXOL;20,79
+71;NON-PROMO;PSYCHO;Сомнолс таблетки по 7,5 мг №10;Somnols tab. 7.5mg N10;Somnols tab. 7.5mg N10;SOMNOL_ZOPIKLON;0
+72;NON-PROMO;PSYCHO;Сомнолс таблетки по 7,5 мг №20;Somnols tab. 7.5mg N20;Somnols tab. 7.5mg N20;SOMNOL_ZOPIKLON;0
+73;PROMO;TOPICAL/DERMA;Сульфаргин мазь 50г;Sulfargins ziede 50g;Sulfargīns ziede 50g;SULFARGIN;6,6
+74;PROMO;PSYCHO;Тингрекс® табл, покр. п/о, 10 мг N30;Tingreks tab.10mg N30;Tingreks tab.10mg N30;MEMANTIN;13
+75;PROMO;PSYCHO;Тингрекс® табл, покр. п/о, 10 мг N60;Tingreks tab.10mg N60;Tingreks tab.10mg N60;MEMANTIN;19
+76;PROMO;PSYCHO;Тингрекс® табл, покр. п/о, 10 мг N90;Tingreks tab.10mg N90;Tingreks tab.10mg N90;MEMANTIN;27
+77;NON-PROMO;ONCO;Фторафур®, капсулы по 400 мг N100;Ftorafūrs kaps. 400mg N100;Ftorafūrs kaps. 400mg N100;FTORAFUR;100
+78;PROMO;TOPICAL/DERMA;Випросал Б мазь 75г в тубе АКЦИЯ;Viprosāls B ziede 75g;Viprosāls B ziede 75g;VIPROSAL;0,01
+79;NON-PROMO;NEWCOMERS;Tamipul kaps. N10;Tamipul kaps. N10;Tamipul kaps. N10;TAMIPUL;0
+80;NON-PROMO;NEWCOMERS;Tetramol kaps. N30;Tetramol kaps. N30;Tetramol kaps. N30;TAMIPUL;0
+81;NON-PROMO;NEWCOMERS;Diazepeks inj. 0.5% 2ml N10;Diazepeks inj. 0.5% 2ml N10;Diazepeks inj. 0.5% 2ml N10;DIAZEPEK;0
+82;NON-PROMO;NEWCOMERS;Morfīna hidr.inj. 1% 1ml N5;Morfīna hidr.inj. 1% 1ml N5;Morfīna hidr.inj. 1% 1ml N5;MORFIN;0
+83;NON-PROMO;NEWCOMERS;Promedols inj. 2% 1ml N5;Promedols inj. 2% 1ml N5;Promedols inj. 2% 1ml N5;PROMEDOL;0
+84;NON-PROMO;NEWCOMERS;Tramadol inj. 50mg/ml 2ml N10;Tramadol inj. 50mg/ml 2ml N10;Tramadol inj. 50mg/ml 2ml N10;TRAMADOL;0
+85;NON-PROMO;NEWCOMERS;Fentanils-c. in. 0.005% 2ml N5;Fentanils-c. in. 0.005% 2ml N5;Fentanils-c. in. 0.005% 2ml N5;FENTANIL;0
+86;NON-PROMO;NEWCOMERS;Oxycodone 10mg/ml 1ml N5;Oxycodone 10mg/ml 1ml N5;Oxycodone 10mg/ml 1ml N5;OXYCODONE;0
+87;NON-PROMO;NEWCOMERS;Oxycodone 10mg/ml 2ml N5;Oxycodone 10mg/ml 2ml N5;Oxycodone 10mg/ml 2ml N5;OXYCODONE;0

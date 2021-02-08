@@ -3,7 +3,9 @@ import tkinter
 from tkinter import Tk, Menu, font, END, messagebox
 
 from dateutil.utils import today
-import PyQt5
+import mysql.connector as mySql
+import pyodbc
+
 
 
 from grindex_ukraine.products.product_classes.item_class import SKU, SKUworkout
@@ -27,7 +29,7 @@ from tkinter import Tk, BOTH, Listbox, StringVar, END
 from tkinter.ttk import Frame, Label
 
 sku_ = SKUworkout(list_items)
-list_ = sku_.get_and_save_all_sku()
+list_ = sku_.get_and_save_list_promo_RX()
 dict = sku_.get_dictionary_item_actual_cip()
 list_e = []
 for item in list_:
