@@ -4,6 +4,7 @@ import tkinter
 from tkinter import Tk, BOTH, Listbox, StringVar, END, messagebox, Checkbutton,font
 from tkinter.ttk import Frame, Label
 import mysql.connector as mySql
+import matplotlib.pyplot as plt
 
 
 
@@ -255,14 +256,6 @@ class Data_GUI(Frame):
         self.var.set(f'Актуальная СИП цена : {dict[value]} евро')
 
 
-
-
-
-
-
-
-
-
     def onclick_euro(self):
         self.month = ''
         self.amount_euro = 0
@@ -303,16 +296,22 @@ class Data_GUI(Frame):
         if self.check_var12.get() == 1:
             self.month = 'Декабрь'
             list.append(self.month)
+        x_coord = list
         list_2 = []
+
         for l in list:
             for i in items:
                 if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
                     x = str(i.volume_euro)
                     x = x.replace(',','.')
                     list_2.append(float(x))
-        #for en in range(0, len(list_2)):
-            for en in list_2:
-                self.amount_euro += en
+        y_coord = []
+        for en in list_2:
+            self.amount_euro += en
+            y_coord.append(en)
+        plt.title(f'Третичные продажи в евро по месяцам по SKU: {self.info_var.get()}')
+        plt.bar(x_coord,y_coord)
+        plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in euro: {self.amount_euro} euro')
     def onclick_quantity(self):
@@ -356,6 +355,8 @@ class Data_GUI(Frame):
             self.month = 'Декабрь'
             list.append(self.month)
         list_2 = []
+        x_coord = list
+        y_coord = []
         for l in list:
             for i in items:
                 if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
@@ -363,8 +364,12 @@ class Data_GUI(Frame):
                     x = x.replace(',','.')
                     list_2.append(float(x))
         #for en in range(0, len(list_2)):
-            for en in list_2:
-                self.quantity += en
+        for en in list_2:
+            self.quantity += en
+            y_coord.append(en)
+        plt.title(f'Третичные продажи в упаковках по месяцам по SKU: {self.info_var.get()}')
+        plt.bar(x_coord, y_coord)
+        plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in packs: {self.quantity} pcs')
 

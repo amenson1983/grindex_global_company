@@ -7,7 +7,7 @@ from grindex_ukraine.products.product_classes.items_GUI import Items_cip_GUI, li
 def list_work():
     root = Tk()
     ex = Items_cip_GUI()
-    root.geometry("500x350")
+    root.geometry("450x350")
     root.mainloop()
 
 if __name__ == '__main__':
