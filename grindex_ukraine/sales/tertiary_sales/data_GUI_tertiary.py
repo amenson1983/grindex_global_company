@@ -88,7 +88,7 @@ class Data_GUI(Frame):
         lb = Listbox(self,width='70',height='15')
 
         for i in acts:
-            lb.insert(END, i)
+            lb.insert(END, i.item)
 
         lb.bind("<<ListboxSelect>>", self.onSelect)
 
@@ -105,21 +105,21 @@ class Data_GUI(Frame):
         sender = val.widget
         idx = sender.curselection()
         value = sender.get(idx)
-        x = dict[value]
+        x = value
         self.info_var.set(value)
-        self.var.set(str('CIP price is ' + str(x) + ' euro'))
+
 
     def onclick(self):
 
         for i in items:
-            if i.item == self.info_var.get():
-                tkinter.messagebox.showinfo('INFO:', i.__str__())
+            if i.item == self.info_var.get() and i.year == 2020:
+                tkinter.messagebox.showinfo('INFO',f'Year:{i.year}, {i.month} Penetration: {i.weight_penetration} %' )
             else: pass
 
 def list_work():
     root = Tk()
     ex = Data_GUI()
-    root.geometry("500x350")
+    root.geometry("500x550")
     root.mainloop()
 
 if __name__ == '__main__':
