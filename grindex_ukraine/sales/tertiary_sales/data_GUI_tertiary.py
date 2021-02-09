@@ -235,16 +235,21 @@ class Data_GUI(Frame):
         if self.check_var12.get() == 1:
             self.month = 'Декабрь'
             list.append(self.month)
+        x_coord = list
         list_2 = []
         for l in list:
             for i in items:
                 if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
-                    entry = [i.year,l,i.weight_penetration]
-                    list_2.append(entry)
-        for en in range(0,len(list_2)):
-            tkinter.messagebox.showinfo('INFO',f'Year: {list_2[en][0]}\nMonth: {list_2[en][1]}\nWeighted penetration: {list_2[en][2]} %')
-       #tkinter.messagebox.showinfo('INFO',f'Year: {list_2[0][0]}\nMonth: {list_2[0][1]}\nWeighted penetration: {list_2[0][2]} %')
-
+                    x = str(i.weight_penetration)
+                    x = x.replace(',', '.')
+                    list_2.append(float(x))
+        y_coord = []
+        for en in list_2:
+            y_coord.append(en)
+        plt.title(f'Пенетрация по месяцам по выбранному SKU: \n{self.info_var.get()}')
+        plt.grid(True)
+        plt.plot(x_coord, y_coord, marker='s')
+        plt.show()
 
     def onSelect(self, val):
         sender = val.widget
@@ -309,8 +314,9 @@ class Data_GUI(Frame):
         for en in list_2:
             self.amount_euro += en
             y_coord.append(en)
-        plt.title(f'Третичные продажи в евро по месяцам по SKU: {self.info_var.get()}')
-        plt.bar(x_coord,y_coord)
+        plt.title(f'Третичные продажи в евро по месяцам по SKU: \n{self.info_var.get()}')
+        plt.grid(True)
+        plt.plot(x_coord,y_coord,marker='s')
         plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in euro: {self.amount_euro} euro')
@@ -367,8 +373,9 @@ class Data_GUI(Frame):
         for en in list_2:
             self.quantity += en
             y_coord.append(en)
-        plt.title(f'Третичные продажи в упаковках по месяцам по SKU: {self.info_var.get()}')
-        plt.bar(x_coord, y_coord)
+        plt.title(f'Третичные продажи в упаковках по месяцам по SKU: \n{self.info_var.get()}')
+        plt.grid(True)
+        plt.bar(x_coord, y_coord, color='g')
         plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in packs: {self.quantity} pcs')
