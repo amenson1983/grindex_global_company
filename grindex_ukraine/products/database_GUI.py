@@ -79,7 +79,7 @@ if __name__ == '__main__':
     #cip = 3.33336
     #item_ = Items(brand, name_translit, promotion, classification, cip,name_sales_report,name_domestic,item_id)
     #ItemsDAO.insert_item(conn,item_)
-    CItemsDAO.delete_item(conn)
+    #CItemsDAO.delete_item(conn)
     items = CItemsDAO.read_item(conn)
     for i in items:
         print(i.__str__())
