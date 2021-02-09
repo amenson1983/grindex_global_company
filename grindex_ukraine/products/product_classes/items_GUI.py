@@ -12,7 +12,7 @@ from grindex_ukraine.products.product_classes.item_class import SKU, SKUworkout
 
 
 def get_items_from_csv():
-    with open("../products/items.csv", "r", encoding="UTF", newline="") as file:
+    with open("items.csv", "r", encoding="UTF", newline="") as file:
         reader = csv.reader(file, delimiter=';')
         list_sku = []
         for row in reader:
@@ -21,7 +21,7 @@ def get_items_from_csv():
                        row[5+int(today().month)])  # row 6 is a current CIP price/ correct in file
             list_sku.append(item)
             # print(row[0], row[1],row[2],row[3],row[4],row[5],row[6])
-        list_sku_main = list_sku[0:]
+        list_sku_main = list_sku[1:]
     return list_sku_main
 
 list_items = get_items_from_csv()
@@ -83,3 +83,4 @@ class Items_cip_GUI(Frame):
             if i.item == self.info_var.get():
                 tkinter.messagebox.showinfo('INFO:', i.__str__())
             else: pass
+#if __name__ == '__main__':

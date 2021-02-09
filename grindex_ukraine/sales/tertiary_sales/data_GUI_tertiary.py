@@ -1,8 +1,17 @@
+import json
 import sqlite3
 import tkinter
-from tkinter import Tk, BOTH, Listbox, StringVar, END, messagebox
+from tkinter import Tk, BOTH, Listbox, StringVar, END, messagebox, Checkbutton,font
 from tkinter.ttk import Frame, Label
 import mysql.connector as mySql
+
+
+
+def get_dict_from_file():
+    with open('item_cip_dictionary.json', "r", encoding="UTF") as myfile:
+        user_str = myfile.read()
+    user_dict = json.loads(user_str)
+    return user_dict
 
 
 class Tertiary_sales:
@@ -66,7 +75,17 @@ class CItemsDAO:
                 )
             return artists
 conn = sqlite3.connect("tertiary_sales_database.db")
-items = CItemsDAO.read_item(conn)
+items_ = CItemsDAO.read_item(conn)
+
+def replace_commas():
+    for i in items_:
+        x = str(i.volume_euro)
+        x.replace(',','.')
+        i.volume_euro = x
+    return items_
+
+items = replace_commas()
+
 class Data_GUI(Frame):
 
     def __init__(self):
@@ -74,21 +93,81 @@ class Data_GUI(Frame):
         self.initUI()
 
     def initUI(self):
-        self.master.title( "ITEMS` CIP PRICE")
+        self.master.title( "Tertiary sales by item")
         self.pack(fill=BOTH, expand=1)
+        self.top_frame = tkinter.Frame(self.master)
         self.button_frame = tkinter.Frame(self.master)
+        self.left_frame = tkinter.Frame()
 
+        self.check_var1 = tkinter.IntVar()
+        self.check_var1.set(0)
+        self.check_var2 = tkinter.IntVar()
+        self.check_var2.set(0)
+        self.check_var3 = tkinter.IntVar()
+        self.check_var3.set(0)
+        self.check_var4 = tkinter.IntVar()
+        self.check_var4.set(0)
+        self.check_var5 = tkinter.IntVar()
+        self.check_var5.set(0)
+        self.check_var6 = tkinter.IntVar()
+        self.check_var6.set(0)
+        self.check_var7 = tkinter.IntVar()
+        self.check_var7.set(0)
+        self.check_var8 = tkinter.IntVar()
+        self.check_var8.set(0)
+        self.check_var9 = tkinter.IntVar()
+        self.check_var9.set(0)
+        self.check_var10 = tkinter.IntVar()
+        self.check_var10.set(0)
+        self.check_var11 = tkinter.IntVar()
+        self.check_var11.set(0)
+        self.check_var12 = tkinter.IntVar()
+        self.check_var12.set(0)
+        my_font = tkinter.font.Font(family='Arial', size=14, weight='bold')
+        my_font1 = tkinter.font.Font(family='Arial', size=11)
+        self.chb1 = tkinter.Checkbutton(self.left_frame, text='Январь', variable=self.check_var1,
+                                        font=my_font1)
+
+
+        self.chb2 = tkinter.Checkbutton(self.left_frame, text='Февраль', variable=self.check_var2,
+                                        font=my_font1)
+        self.chb3 = tkinter.Checkbutton(self.left_frame, text='Март', variable=self.check_var3,
+                                        font=my_font1)
+        self.chb4 = tkinter.Checkbutton(self.left_frame, text='Апрель',
+                                        variable=self.check_var4, font=my_font1)
+        self.chb5 = tkinter.Checkbutton(self.left_frame, text='Май', variable=self.check_var5, font=my_font1)
+        self.chb6 = tkinter.Checkbutton(self.left_frame, text='Июнь', variable=self.check_var6,
+                                        font=my_font1)
+        self.chb7 = tkinter.Checkbutton(self.top_frame, text='Июль', variable=self.check_var7,
+                                        font=my_font1)
+        self.chb8 = tkinter.Checkbutton(self.top_frame, text='Август', variable=self.check_var8,
+                                        font=my_font1)
+        self.chb9 = tkinter.Checkbutton(self.top_frame, text='Сентябрь',
+                                        variable=self.check_var9, font=my_font1)
+        self.chb10 = tkinter.Checkbutton(self.top_frame, text='Октябрь', variable=self.check_var10, font=my_font1)
+        self.chb11 = tkinter.Checkbutton(self.top_frame, text='Ноябрь', variable=self.check_var11,
+                                        font=my_font1)
+
+        self.chb12 = tkinter.Checkbutton(self.top_frame, text='Декабрь', variable=self.check_var12,
+                                        font=my_font1,padx=15, pady=-10)
 
         acts = items
-        self.ok_button = tkinter.Button(self.button_frame, text='Show info', command=self.onclick)
+        self.show_button = tkinter.Button(self.button_frame, text='Weighted penetration', command=self.show_renetration)
+        self.show_button.pack(side='left')
+        self.ok_button = tkinter.Button(self.button_frame, text='Sales in euro', command=self.onclick_euro)
         self.ok_button.pack(side='left')
         self.quit_button = tkinter.Button(self.button_frame, text='Quit', command=self.master.destroy)
         self.quit_button.pack(side='left')
         self.button_frame.pack()
         lb = Listbox(self,width='70',height='15')
+        self.ok_button_quantity = tkinter.Button(self.button_frame, text='Sales in packs', command=self.onclick_quantity)
+        self.ok_button_quantity.pack(side='left')
 
+        i_list = []
         for i in acts:
-            lb.insert(END, i.item)
+            i_list.append(i.item)
+        for item in i_list:
+            lb.insert(END, item)
 
         lb.bind("<<ListboxSelect>>", self.onSelect)
 
@@ -101,20 +180,193 @@ class Data_GUI(Frame):
         self.info_label = Label(self, text=0, textvariable=self.info_var)
         self.info_label.pack()
 
+        self.chb1.pack(side='left')
+        self.chb2.pack(side='left')
+        self.chb3.pack(side='left')
+        self.chb4.pack(side='left')
+        self.chb5.pack(side='left')
+        self.chb6.pack(side='left')
+        self.chb7.pack(side='left')
+        self.chb8.pack(side='left')
+        self.chb9.pack(side='left')
+        self.chb10.pack(side='left')
+        self.chb11.pack(side='left')
+        self.chb12.pack(side='left')
+        self.top_frame.pack(side='bottom')
+        self.left_frame.pack(side='top')
+
+    def show_renetration(self):
+        self.month = ''
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    entry = [i.year,l,i.weight_penetration]
+                    list_2.append(entry)
+        for en in range(0,len(list_2)):
+            tkinter.messagebox.showinfo('INFO',f'Year: {list_2[en][0]}\nMonth: {list_2[en][1]}\nWeighted penetration: {list_2[en][2]} %')
+       #tkinter.messagebox.showinfo('INFO',f'Year: {list_2[0][0]}\nMonth: {list_2[0][1]}\nWeighted penetration: {list_2[0][2]} %')
+
+
     def onSelect(self, val):
         sender = val.widget
         idx = sender.curselection()
         value = sender.get(idx)
         x = value
         self.info_var.set(value)
+        dict = get_dict_from_file()
+        self.var.set(f'Актуальная СИП цена : {dict[value]} евро')
 
 
-    def onclick(self):
 
-        for i in items:
-            if i.item == self.info_var.get() and i.year == 2020:
-                tkinter.messagebox.showinfo('INFO',f'Year:{i.year}, {i.month} Penetration: {i.weight_penetration} %' )
-            else: pass
+
+
+
+
+
+
+
+    def onclick_euro(self):
+        self.month = ''
+        self.amount_euro = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    x = str(i.volume_euro)
+                    x = x.replace(',','.')
+                    list_2.append(float(x))
+        #for en in range(0, len(list_2)):
+            for en in list_2:
+                self.amount_euro += en
+        tkinter.messagebox.showinfo('INFO',
+                                    f'Sales in euro: {self.amount_euro} euro')
+    def onclick_quantity(self):
+        self.month = ''
+        self.quantity = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    x = str(i.quantity)
+                    x = x.replace(',','.')
+                    list_2.append(float(x))
+        #for en in range(0, len(list_2)):
+            for en in list_2:
+                self.quantity += en
+        tkinter.messagebox.showinfo('INFO',
+                                    f'Sales in packs: {self.quantity} pcs')
 
 def list_work():
     root = Tk()
@@ -123,6 +375,7 @@ def list_work():
     root.mainloop()
 
 if __name__ == '__main__':
+    #print(items)
     list_work()
 #if __name__ == '__main__':
         # ArtistsDAO.delete_artist(Tertiary_sales(276,"Kazka"))
