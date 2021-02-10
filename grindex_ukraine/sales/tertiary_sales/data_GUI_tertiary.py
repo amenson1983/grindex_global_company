@@ -76,12 +76,23 @@ class CItemsDAO:
                     Tertiary_sales(year=entry[0], month=entry[1], item=entry[2], brand=entry[3], weight_penetration=entry[4], weight_sro=entry[5], quantity=entry[6], volume_euro=entry[7])
                 )
             return artists
+
+
+
+
 conn = sqlite3.connect("tertiary_sales_database.db")
 items_ = CItemsDAO.read_item(conn)
 
 def replace_commas():
     for i in items_:
         x = str(i.volume_euro)
+        x.replace(',','.')
+        i.volume_euro = x
+    return items_
+
+def replace_commas_wei_penet():
+    for i in items_:
+        x = str(i.weight_penetration)
         x.replace(',','.')
         i.volume_euro = x
     return items_
@@ -652,6 +663,20 @@ class Data_GUI(Frame):
         print(list_2)
         tkinter.messagebox.showinfo('INFO',
                                     f'File {FILENAME} has been succesfully written!')
+    def save_weight_pen_month_item_RX_PROMO_to_csv(self):
+        with sqlite3.connect("tertiary_sales_database.db") as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT ymm.Month, items.ITEMSTRANSLIT, items.ITEMSBRAND, tertiary_sales.WeightPenetration from tertiary_sales join ymm on tertiary_sales.Period = ymm.Year_monnum JOIN items on tertiary_sales.Fullmedicationname = items.Fullmedicationname where tertiary_sales.MarketOrg = 'Grindeks  (Latvia)' and items.PROMOTION = 'PROMO'")
+            results = cursor.fetchall()
+        item_list = []
+        for i in results:
+            x = [i[0],i[1],i[2],i[3]]
+            x[3] = str(i[3]).replace(',','.')
+            i = x
+            item_list.append(i)
+            print(i)
+        print(item_list)
+
 def list_work():
     root = Tk()
     ex = Data_GUI()
@@ -666,6 +691,8 @@ def list_work():
                           command=ex.save_weight_pen_month_to_csv)
     save_menu.add_command(label="Save month-weighted_penetration-item data to CSV",
                           command=ex.save_weight_pen_month_item_to_csv)
+    save_menu.add_command(label="Save month-weighted_penetration-item RX-PROMO data to CSV",
+                          command=ex.save_weight_pen_month_item_RX_PROMO_to_csv)
 
     file_menu.add_command(label="New")
     file_menu.add_cascade(label="Save",menu=save_menu)
@@ -682,4 +709,4 @@ def list_work():
 if __name__ == '__main__':
 
     list_work()
-
+#C:\Users\Anastasia Siedykh\Documents\Backup\python_projects\gindex_global_company\grindex_ukraine\products\rx_promo_list.txt
