@@ -381,18 +381,79 @@ class Data_GUI(Frame):
                 users.append({"month": str(list[num]),
                     "quantity_packs": str(list_2[num])})
 
-        print(list)
-        print(list_2)
-        print(users)
         strData = json.dumps(users)
         with open(FILENAME, "w") as file:
             file.write(strData)
+            tkinter.messagebox.showinfo('INFO',
+                                        f'File {FILENAME} has been succesfully written!')
+    def save_weight_pen_month_to_json(self):
+        FILENAME = f"{self.info_var.get()}_month_weight_pen.json"
+        self.month = ''
+        self.quantity = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        x_coord = list
+        y_coord = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    x = str(i.weight_penetration)
+                    x = x.replace(',','.')
+                    list_2.append(float(x))
+
+        for en in list_2:
+            self.quantity += en
+            y_coord.append(en)
+        users = []
+        for num in range(0,len(list)):
+                users.append({"month": str(list[num]),
+                    "weighted_penetration": str(list_2[num])})
+
+        strData = json.dumps(users)
+        with open(FILENAME, "w") as file:
             file.write(strData)
+            tkinter.messagebox.showinfo('INFO',
+                                        f'File {FILENAME} has been succesfully written!')
     def get_dict_from_file_1(self):
         FILENAME = f"{self.info_var.get()}_month_quantity.json"
         with open(FILENAME, "r", encoding="UTF") as myfile:
             user_str = myfile.read()
-        print(user_str)
         user_dict = json.loads(user_str)
         return user_dict
 
@@ -467,7 +528,7 @@ def list_work():
     file_menu = tkinter.Menu()
     file_menu.add_command(label="New")
     file_menu.add_command(label="Save month-sold_packs data to JSON", command=ex.save_quant_month_to_json)
-    file_menu.add_command(label="Open")
+    file_menu.add_command(label="Save month-weighted_penetration data to JSON", command=ex.save_weight_pen_month_to_json)
     file_menu.add_separator()
     file_menu.add_command(label="Exit")
 
