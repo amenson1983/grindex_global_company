@@ -322,8 +322,8 @@ class Data_GUI(Frame):
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in euro: {self.amount_euro} euro')
 
-    def save_to_csv(self):
-        FILENAME = "users.csv"
+    def save_quant_month_to_json(self):
+        FILENAME = f"{self.info_var.get()}_month_quantity.json"
         self.month = ''
         self.quantity = 0
         list = []
@@ -385,11 +385,12 @@ class Data_GUI(Frame):
         print(list_2)
         print(users)
         strData = json.dumps(users)
-        with open("month_quantity.json", "w") as file:
+        with open(FILENAME, "w") as file:
             file.write(strData)
             file.write(strData)
     def get_dict_from_file_1(self):
-        with open("month_quantity.json", "r", encoding="UTF") as myfile:
+        FILENAME = f"{self.info_var.get()}_month_quantity.json"
+        with open(FILENAME, "r", encoding="UTF") as myfile:
             user_str = myfile.read()
         print(user_str)
         user_dict = json.loads(user_str)
@@ -465,7 +466,7 @@ def list_work():
     main_menu = tkinter.Menu()
     file_menu = tkinter.Menu()
     file_menu.add_command(label="New")
-    file_menu.add_command(label="Save current data to JSON", command=ex.save_to_csv)
+    file_menu.add_command(label="Save month-sold_packs data to JSON", command=ex.save_quant_month_to_json)
     file_menu.add_command(label="Open")
     file_menu.add_separator()
     file_menu.add_command(label="Exit")
