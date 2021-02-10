@@ -526,9 +526,13 @@ def list_work():
     root.geometry("500x550")
     main_menu = tkinter.Menu()
     file_menu = tkinter.Menu()
+    save_menu = tkinter.Menu()
+    save_menu.add_command(label="Save month-sold_packs data to JSON", command=ex.save_quant_month_to_json)
+    save_menu.add_command(label="Save month-weighted_penetration data to JSON",
+                          command=ex.save_weight_pen_month_to_json)
+
     file_menu.add_command(label="New")
-    file_menu.add_command(label="Save month-sold_packs data to JSON", command=ex.save_quant_month_to_json)
-    file_menu.add_command(label="Save month-weighted_penetration data to JSON", command=ex.save_weight_pen_month_to_json)
+    file_menu.add_cascade(label="Save",menu=save_menu)
     file_menu.add_separator()
     file_menu.add_command(label="Exit")
 
