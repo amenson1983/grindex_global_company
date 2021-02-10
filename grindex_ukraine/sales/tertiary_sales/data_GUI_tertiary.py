@@ -1,3 +1,4 @@
+import csv
 import json
 import sqlite3
 import tkinter
@@ -9,7 +10,7 @@ import matplotlib.pyplot as plt
 
 
 def get_dict_from_file():
-    with open('item_cip_dictionary.json', "r", encoding="UTF") as myfile:
+    with open('month_quantity.json', "r", encoding="UTF") as myfile:
         user_str = myfile.read()
     user_dict = json.loads(user_str)
     return user_dict
@@ -248,7 +249,7 @@ class Data_GUI(Frame):
             y_coord.append(en)
         plt.title(f'Пенетрация по месяцам по выбранному SKU: \n{self.info_var.get()}')
         plt.grid(True)
-        plt.plot(x_coord, y_coord, marker='s')
+        plt.plot(x_coord, y_coord,marker='s')
         plt.show()
 
     def onSelect(self, val):
@@ -257,8 +258,8 @@ class Data_GUI(Frame):
         value = sender.get(idx)
         x = value
         self.info_var.set(value)
-        dict = get_dict_from_file()
-        self.var.set(f'Актуальная СИП цена : {dict[value]} евро')
+
+        self.var.set(f'Здесь может быть еще какое-нибудь сообщение')
 
 
     def onclick_euro(self):
@@ -320,6 +321,83 @@ class Data_GUI(Frame):
         plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in euro: {self.amount_euro} euro')
+
+    def save_to_csv(self):
+        FILENAME = "users.csv"
+        self.month = ''
+        self.quantity = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        x_coord = list
+        y_coord = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    x = str(i.quantity)
+                    x = x.replace(',','.')
+                    list_2.append(float(x))
+
+        for en in list_2:
+            self.quantity += en
+            y_coord.append(en)
+        users = []
+        for num in range(0,len(list)):
+                users.append({"month": str(list[num]),
+                    "quantity_packs": str(list_2[num])})
+
+        print(list)
+        print(list_2)
+        print(users)
+        strData = json.dumps(users)
+        with open("month_quantity.json", "w") as file:
+            file.write(strData)
+            file.write(strData)
+    def get_dict_from_file_1(self):
+        with open("month_quantity.json", "r", encoding="UTF") as myfile:
+            user_str = myfile.read()
+        print(user_str)
+        user_dict = json.loads(user_str)
+        return user_dict
+
+
+
+
     def onclick_quantity(self):
         self.month = ''
         self.quantity = 0
@@ -384,28 +462,22 @@ def list_work():
     root = Tk()
     ex = Data_GUI()
     root.geometry("500x550")
+    main_menu = tkinter.Menu()
+    file_menu = tkinter.Menu()
+    file_menu.add_command(label="New")
+    file_menu.add_command(label="Save current data to JSON", command=ex.save_to_csv)
+    file_menu.add_command(label="Open")
+    file_menu.add_separator()
+    file_menu.add_command(label="Exit")
+
+    main_menu.add_cascade(label="File",menu=file_menu)
+    main_menu.add_cascade(label="Edit")
+    main_menu.add_cascade(label="View")
+
+    root.config(menu=main_menu)
     root.mainloop()
 
 if __name__ == '__main__':
-    #print(items)
-    list_work()
-#if __name__ == '__main__':
-        # ArtistsDAO.delete_artist(Tertiary_sales(276,"Kazka"))
-        # item = int(input("item ="))
-        # brand = input("brand =")
-    #item_id = 90
-    #brand = 'AAA'
-    #name_translit = 'BBB'
-    #promotion = 'NNN'
-    #classification = 'NNN'
-    #name_domestic = "fff"
-    #name_sales_report = "ffgg"
-    #cip = 3.33336
-    #item_ = Tertiary_sales(brand, name_translit, promotion, classification, cip,name_sales_report,name_domestic,item_id)
-    #ItemsDAO.insert_item(conn,item_)
-    #CItemsDAO.delete_item(conn)
 
-    #for i in items:
-        #if i.year == 2020:
-            #print(i.__str__())
-            #print('*'*11)
+    list_work()
+
