@@ -389,7 +389,7 @@ class Data_GUI(Frame):
                     "quantity_packs": str(list_2[num])})
 
         strData = json.dumps(users)
-        with open(FILENAME, "w") as file:
+        with open(FILENAME, "w", encoding='utf-8') as file:
             file.write(strData)
             tkinter.messagebox.showinfo('INFO',
                                         f'File {FILENAME} has been succesfully written!')

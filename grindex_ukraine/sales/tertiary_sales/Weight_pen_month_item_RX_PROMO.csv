@@ -1,57 +1,113 @@
 month,month_cube,item_translit,item_brand,weighted_penetration,4
-Aug,Август,Apilaks tab. 10mg N25,APILAK,"41,65",41.65
-Aug,Август,Apilaks tab. 10mg N50,APILAK,"14,85",14.85
-Aug,Август,Kapsikama ziede 30g,KAPSIKAM,"28,34",28.34
-Aug,Август,Kapsikama ziede 50g,KAPSIKAM,"44,73",44.73
-Aug,Август,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"5,87",5.87
-Aug,Август,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"21,41",21.41
-Aug,Август,Ipigrix tab. 20mg N50,IPIDAKRIN,"30,44",30.44
-Aug,Август,Mildronate GX tab. 500mg N60,MILDRONAT,"36,01",36.01
-Aug,Август,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"73,47",73.47
-Aug,Август,Mildronāts kaps. 500mg N60,MILDRONAT,"75,75",75.75
-Aug,Август,Mildronāts inj. 10% 5ml N10,MILDRONAT,"74,65",74.65
-Aug,Август,Mildronāts inj. 10% 5ml N20,MILDRONAT,"9,21",9.21
-Aug,Август,Recreol 5% krēms 30g,RECREOL,"0,42",0.42
-Aug,Август,Recreol 5% krēms 50g,RECREOL,"0,32",0.32
-Aug,Август,Recreol 5% ziede 30g,RECREOL,"0,06",0.06
-Aug,Август,Recreol 5% ziede 50g,RECREOL,"0,14",0.14
-Aug,Август,Rispaxol tab. 2mg N20,RISPAXOL,"6,61",6.61
-Aug,Август,Rispaxol tab. 2mg N60,RISPAXOL,"11,11",11.11
-Aug,Август,Rispaxol tab. 4mg N60,RISPAXOL,"4,65",4.65
-Aug,Август,Sulfargīns ziede 50g,SULFARGIN,"23,57",23.57
-Aug,Август,Tingreks tab.10mg N30,MEMANTIN,"5,45",5.45
-Aug,Август,Tingreks tab.10mg N60,MEMANTIN,"1,81",1.81
-Aug,Август,Tingreks tab.10mg N90,MEMANTIN,"0,88",0.88
-Aug,Август,"Venlaxor tab. 37,5mg N30",VENLAXOR,"12,03",12.03
-Aug,Август,Venlaxor tab. 75mg N30,VENLAXOR,"20,26",20.26
-Aug,Август,Viprosāls B ziede 30g,VIPROSAL,"43,63",43.63
-Aug,Август,Viprosāls B ziede 50g,VIPROSAL,"61,33",61.33
-Aug,Август,Viprosāls B ziede 75g,VIPROSAL,"7,08",7.08
-May,Май,Apilaks tab. 10mg N25,APILAK,"45,41",45.41
-May,Май,Apilaks tab. 10mg N50,APILAK,"11,77",11.77
-May,Май,Kapsikama ziede 30g,KAPSIKAM,"31,03",31.03
-May,Май,Kapsikama ziede 50g,KAPSIKAM,"49,83",49.83
-May,Май,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"5,15",5.15
-May,Май,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"17,46",17.46
-May,Май,Ipigrix tab. 20mg N50,IPIDAKRIN,"28,22",28.22
-May,Май,Mildronate GX tab. 500mg N60,MILDRONAT,"33,27",33.27
-May,Май,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"74,75",74.75
-May,Май,Mildronāts kaps. 500mg N60,MILDRONAT,"74,51",74.51
-May,Май,Mildronāts inj. 10% 5ml N10,MILDRONAT,"75,45",75.45
-May,Май,Mildronāts inj. 10% 5ml N20,MILDRONAT,"6,61",6.61
-May,Май,Recreol 5% krēms 30g,RECREOL,"0,38",0.38
-May,Май,Recreol 5% krēms 50g,RECREOL,"0,42",0.42
-May,Май,Recreol 5% ziede 30g,RECREOL,"0,02",0.02
-May,Май,Recreol 5% ziede 50g,RECREOL,"0,22",0.22
-May,Май,Rispaxol tab. 2mg N20,RISPAXOL,"6,87",6.87
-May,Май,Rispaxol tab. 2mg N60,RISPAXOL,"9,89",9.89
-May,Май,Rispaxol tab. 4mg N60,RISPAXOL,"3,53",3.53
-May,Май,Sulfargīns ziede 50g,SULFARGIN,"20,24",20.24
-May,Май,Tingreks tab.10mg N30,MEMANTIN,"4,83",4.83
-May,Май,Tingreks tab.10mg N60,MEMANTIN,"1,05",1.05
-May,Май,Tingreks tab.10mg N90,MEMANTIN,"0,8",0.8
-May,Май,"Venlaxor tab. 37,5mg N30",VENLAXOR,"11,47",11.47
-May,Май,Venlaxor tab. 75mg N30,VENLAXOR,"17,66",17.66
-May,Май,Viprosāls B ziede 30g,VIPROSAL,"34,87",34.87
-May,Май,Viprosāls B ziede 50g,VIPROSAL,"69,87",69.87
-May,Май,Viprosāls B ziede 75g,VIPROSAL,"4,95",4.95
+Dec,Декабрь,Apilaks tab. 10mg N25,APILAK,"41,85",41.85
+Dec,Декабрь,Apilaks tab. 10mg N50,APILAK,"14,05",14.05
+Dec,Декабрь,Kapsikama ziede 30g,KAPSIKAM,"32,87",32.87
+Dec,Декабрь,Kapsikama ziede 50g,KAPSIKAM,"55,21",55.21
+Dec,Декабрь,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"4,91",4.91
+Dec,Декабрь,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"18,28",18.28
+Dec,Декабрь,Ipigrix tab. 20mg N50,IPIDAKRIN,"30,48",30.48
+Dec,Декабрь,Mildronate GX tab. 500mg N60,MILDRONAT,"41,55",41.55
+Dec,Декабрь,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"79,43",79.43
+Dec,Декабрь,Mildronāts kaps. 500mg N60,MILDRONAT,"80,84",80.84
+Dec,Декабрь,Mildronāts inj. 10% 5ml N10,MILDRONAT,"77,78",77.78
+Dec,Декабрь,Mildronāts inj. 10% 5ml N20,MILDRONAT,"9,87",9.87
+Dec,Декабрь,Recreol 5% krēms 30g,RECREOL,"0,72",0.72
+Dec,Декабрь,Recreol 5% krēms 50g,RECREOL,"0,56",0.56
+Dec,Декабрь,Recreol 5% ziede 30g,RECREOL,"0,16",0.16
+Dec,Декабрь,Recreol 5% ziede 50g,RECREOL,"0,34",0.34
+Dec,Декабрь,Rispaxol tab. 2mg N20,RISPAXOL,"7,44",7.44
+Dec,Декабрь,Rispaxol tab. 2mg N60,RISPAXOL,"10,88",10.88
+Dec,Декабрь,Rispaxol tab. 4mg N60,RISPAXOL,"4,27",4.27
+Dec,Декабрь,Sulfargīns ziede 50g,SULFARGIN,"22,07",22.07
+Dec,Декабрь,Tingreks tab.10mg N30,MEMANTIN,"5,13",5.13
+Dec,Декабрь,Tingreks tab.10mg N60,MEMANTIN,"1,71",1.71
+Dec,Декабрь,Tingreks tab.10mg N90,MEMANTIN,"0,8",0.8
+Dec,Декабрь,"Venlaxor tab. 37,5mg N30",VENLAXOR,"13,51",13.51
+Dec,Декабрь,Venlaxor tab. 75mg N30,VENLAXOR,"22,85",22.85
+Dec,Декабрь,Viprosāls B ziede 30g,VIPROSAL,"40,74",40.74
+Dec,Декабрь,Viprosāls B ziede 50g,VIPROSAL,"65,75",65.75
+Dec,Декабрь,Viprosāls B ziede 75g,VIPROSAL,"11,45",11.45
+Feb,Февраль,Apilaks tab. 10mg N25,APILAK,"46,41",46.41
+Feb,Февраль,Apilaks tab. 10mg N50,APILAK,"13,53",13.53
+Feb,Февраль,Kapsikama ziede 30g,KAPSIKAM,"32,33",32.33
+Feb,Февраль,Kapsikama ziede 50g,KAPSIKAM,"54,17",54.17
+Feb,Февраль,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"7,3",7.3
+Feb,Февраль,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"20,44",20.44
+Feb,Февраль,Ipigrix tab. 20mg N50,IPIDAKRIN,"28,36",28.36
+Feb,Февраль,Mildronate GX tab. 500mg N60,MILDRONAT,"35,93",35.93
+Feb,Февраль,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"73,37",73.37
+Feb,Февраль,Mildronāts kaps. 500mg N60,MILDRONAT,"75,69",75.69
+Feb,Февраль,Mildronāts inj. 10% 5ml N10,MILDRONAT,"78,84",78.84
+Feb,Февраль,Mildronāts inj. 10% 5ml N20,MILDRONAT,"6,97",6.97
+Feb,Февраль,Recreol 5% krēms 30g,RECREOL,"0,42",0.42
+Feb,Февраль,Recreol 5% krēms 50g,RECREOL,"0,44",0.44
+Feb,Февраль,Recreol 5% ziede 30g,RECREOL,"0,2",0.2
+Feb,Февраль,Recreol 5% ziede 50g,RECREOL,"0,26",0.26
+Feb,Февраль,Rispaxol tab. 2mg N20,RISPAXOL,"7,44",7.44
+Feb,Февраль,Rispaxol tab. 2mg N60,RISPAXOL,"8,32",8.32
+Feb,Февраль,Rispaxol tab. 4mg N60,RISPAXOL,"3,65",3.65
+Feb,Февраль,Sulfargīns ziede 50g,SULFARGIN,"20,76",20.76
+Feb,Февраль,Tingreks tab.10mg N30,MEMANTIN,"5,21",5.21
+Feb,Февраль,Tingreks tab.10mg N60,MEMANTIN,"0,74",0.74
+Feb,Февраль,Tingreks tab.10mg N90,MEMANTIN,"0,88",0.88
+Feb,Февраль,"Venlaxor tab. 37,5mg N30",VENLAXOR,"12,51",12.51
+Feb,Февраль,Venlaxor tab. 75mg N30,VENLAXOR,"18,64",18.64
+Feb,Февраль,Viprosāls B ziede 30g,VIPROSAL,"32,75",32.75
+Feb,Февраль,Viprosāls B ziede 50g,VIPROSAL,"69,25",69.25
+Feb,Февраль,Viprosāls B ziede 75g,VIPROSAL,"4,37",4.37
+Jan,Январь,Apilaks tab. 10mg N25,APILAK,"47,62",47.62
+Jan,Январь,Apilaks tab. 10mg N50,APILAK,"16,35",16.35
+Jan,Январь,Kapsikama ziede 30g,KAPSIKAM,"37,24",37.24
+Jan,Январь,Kapsikama ziede 50g,KAPSIKAM,"56,55",56.55
+Jan,Январь,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"8,04",8.04
+Jan,Январь,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"21,95",21.95
+Jan,Январь,Ipigrix tab. 20mg N50,IPIDAKRIN,"30,56",30.56
+Jan,Январь,Mildronate GX tab. 500mg N60,MILDRONAT,"33,63",33.63
+Jan,Январь,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"72,83",72.83
+Jan,Январь,Mildronāts kaps. 500mg N60,MILDRONAT,"75,65",75.65
+Jan,Январь,Mildronāts inj. 10% 5ml N10,MILDRONAT,"76,63",76.63
+Jan,Январь,Mildronāts inj. 10% 5ml N20,MILDRONAT,"9,65",9.65
+Jan,Январь,Recreol 5% krēms 30g,RECREOL,"0,34",0.34
+Jan,Январь,Recreol 5% krēms 50g,RECREOL,"0,4",0.4
+Jan,Январь,Recreol 5% ziede 30g,RECREOL,"0,2",0.2
+Jan,Январь,Recreol 5% ziede 50g,RECREOL,"0,72",0.72
+Jan,Январь,Rispaxol tab. 2mg N20,RISPAXOL,"7,78",7.78
+Jan,Январь,Rispaxol tab. 2mg N60,RISPAXOL,"8,96",8.96
+Jan,Январь,Rispaxol tab. 4mg N60,RISPAXOL,"3,93",3.93
+Jan,Январь,Sulfargīns ziede 50g,SULFARGIN,"24,25",24.25
+Jan,Январь,Tingreks tab.10mg N30,MEMANTIN,"5,51",5.51
+Jan,Январь,Tingreks tab.10mg N60,MEMANTIN,"1,21",1.21
+Jan,Январь,Tingreks tab.10mg N90,MEMANTIN,"1,09",1.09
+Jan,Январь,"Venlaxor tab. 37,5mg N30",VENLAXOR,"13,01",13.01
+Jan,Январь,Venlaxor tab. 75mg N30,VENLAXOR,"19,11",19.11
+Jan,Январь,Viprosāls B ziede 30g,VIPROSAL,"36,45",36.45
+Jan,Январь,Viprosāls B ziede 50g,VIPROSAL,"72,03",72.03
+Jan,Январь,Viprosāls B ziede 75g,VIPROSAL,"3,25",3.25
+Nov,Ноябрь,Apilaks tab. 10mg N25,APILAK,"42,13",42.13
+Nov,Ноябрь,Apilaks tab. 10mg N50,APILAK,"13,83",13.83
+Nov,Ноябрь,Kapsikama ziede 30g,KAPSIKAM,"32,59",32.59
+Nov,Ноябрь,Kapsikama ziede 50g,KAPSIKAM,"53,25",53.25
+Nov,Ноябрь,Ipigrix inj. 5mg/ml N10,IPIDAKRIN,"4,87",4.87
+Nov,Ноябрь,Ipigrix inj. 15mg/ml N10,IPIDAKRIN,"17,6",17.6
+Nov,Ноябрь,Ipigrix tab. 20mg N50,IPIDAKRIN,"31,53",31.53
+Nov,Ноябрь,Mildronate GX tab. 500mg N60,MILDRONAT,"40,56",40.56
+Nov,Ноябрь,Mildronāts kaps. 250mg N40 OTC,MILDRONAT,"78,86",78.86
+Nov,Ноябрь,Mildronāts kaps. 500mg N60,MILDRONAT,"82,19",82.19
+Nov,Ноябрь,Mildronāts inj. 10% 5ml N10,MILDRONAT,"78,88",78.88
+Nov,Ноябрь,Mildronāts inj. 10% 5ml N20,MILDRONAT,"9,75",9.75
+Nov,Ноябрь,Recreol 5% krēms 30g,RECREOL,"0,52",0.52
+Nov,Ноябрь,Recreol 5% krēms 50g,RECREOL,"0,42",0.42
+Nov,Ноябрь,Recreol 5% ziede 30g,RECREOL,"0,06",0.06
+Nov,Ноябрь,Recreol 5% ziede 50g,RECREOL,"0,3",0.3
+Nov,Ноябрь,Rispaxol tab. 2mg N20,RISPAXOL,"8,16",8.16
+Nov,Ноябрь,Rispaxol tab. 2mg N60,RISPAXOL,"11,15",11.15
+Nov,Ноябрь,Rispaxol tab. 4mg N60,RISPAXOL,"4,09",4.09
+Nov,Ноябрь,Sulfargīns ziede 50g,SULFARGIN,"24,13",24.13
+Nov,Ноябрь,Tingreks tab.10mg N30,MEMANTIN,"4,95",4.95
+Nov,Ноябрь,Tingreks tab.10mg N60,MEMANTIN,"1,71",1.71
+Nov,Ноябрь,Tingreks tab.10mg N90,MEMANTIN,"0,5",0.5
+Nov,Ноябрь,"Venlaxor tab. 37,5mg N30",VENLAXOR,"14,65",14.65
+Nov,Ноябрь,Venlaxor tab. 75mg N30,VENLAXOR,"21,17",21.17
+Nov,Ноябрь,Viprosāls B ziede 30g,VIPROSAL,"40,82",40.82
+Nov,Ноябрь,Viprosāls B ziede 50g,VIPROSAL,"65,55",65.55
+Nov,Ноябрь,Viprosāls B ziede 75g,VIPROSAL,"9,97",9.97
