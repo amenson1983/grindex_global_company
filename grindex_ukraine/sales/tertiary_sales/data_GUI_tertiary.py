@@ -664,18 +664,70 @@ class Data_GUI(Frame):
         tkinter.messagebox.showinfo('INFO',
                                     f'File {FILENAME} has been succesfully written!')
     def save_weight_pen_month_item_RX_PROMO_to_csv(self):
+        FILENAME = "Weight_pen_month_item_RX_PROMO.csv"
+        self.month = ''
+        self.quantity = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
         with sqlite3.connect("tertiary_sales_database.db") as conn:
             cursor = conn.cursor()
-            cursor.execute("SELECT ymm.Month, items.ITEMSTRANSLIT, items.ITEMSBRAND, tertiary_sales.WeightPenetration from tertiary_sales join ymm on tertiary_sales.Period = ymm.Year_monnum JOIN items on tertiary_sales.Fullmedicationname = items.Fullmedicationname where tertiary_sales.MarketOrg = 'Grindeks  (Latvia)' and items.PROMOTION = 'PROMO'")
+            cursor.execute("SELECT ymm.Month, ymm.Месяц, items.ITEMSTRANSLIT, items.ITEMSBRAND, tertiary_sales.WeightPenetration from tertiary_sales join ymm on tertiary_sales.Period = ymm.Year_monnum JOIN items on tertiary_sales.Fullmedicationname = items.Fullmedicationname where tertiary_sales.MarketOrg = 'Grindeks  (Latvia)' and items.PROMOTION = 'PROMO' and ymm.Year = '2020'")
             results = cursor.fetchall()
         item_list = []
         for i in results:
-            x = [i[0],i[1],i[2],i[3]]
-            x[3] = str(i[3]).replace(',','.')
+            x = {"month":str(i[0]),"month_cube":str(i[1]),"item_translit":str(i[2]),"item_brand":str(i[3]),"weighted_penetration":str(i[4])}
+            x[4] = str(i[4]).replace(',','.')
             i = x
             item_list.append(i)
-            print(i)
-        print(item_list)
+
+        final_list = []
+        for i in item_list:
+            if i.get("month_cube") in list:
+                final_list.append(i)
+        print(final_list)
+
+        with open(FILENAME, "w", newline="", encoding='UTF-8') as file:
+            columns = ["month","month_cube", "item_translit", "item_brand", "weighted_penetration", 4]
+            writer = csv.DictWriter(file, fieldnames=columns)
+            writer.writeheader()
+
+            # запись нескольких строк
+            writer.writerows(final_list)
 
 def list_work():
     root = Tk()
