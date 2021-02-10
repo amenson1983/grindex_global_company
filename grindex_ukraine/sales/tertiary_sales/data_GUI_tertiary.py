@@ -251,7 +251,6 @@ class Data_GUI(Frame):
         plt.grid(True)
         plt.plot(x_coord, y_coord,marker='s')
         plt.show()
-
     def onSelect(self, val):
         sender = val.widget
         idx = sender.curselection()
@@ -260,8 +259,6 @@ class Data_GUI(Frame):
         self.info_var.set(value)
 
         self.var.set(f'Здесь может быть еще какое-нибудь сообщение')
-
-
     def onclick_euro(self):
         self.month = ''
         self.amount_euro = 0
@@ -321,7 +318,6 @@ class Data_GUI(Frame):
         plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in euro: {self.amount_euro} euro')
-
     def save_quant_month_to_json(self):
         FILENAME = f"{self.info_var.get()}_month_quantity.json"
         self.month = ''
@@ -456,10 +452,6 @@ class Data_GUI(Frame):
             user_str = myfile.read()
         user_dict = json.loads(user_str)
         return user_dict
-
-
-
-
     def onclick_quantity(self):
         self.month = ''
         self.quantity = 0
@@ -519,7 +511,76 @@ class Data_GUI(Frame):
         plt.show()
         tkinter.messagebox.showinfo('INFO',
                                     f'Sales in packs: {self.quantity} pcs')
+    def save_weight_pen_month_to_csv(self):
+        FILENAME = f"{self.info_var.get()}_month_weight_pen.csv"
+        self.month = ''
+        self.quantity = 0
+        list = []
+        if self.check_var1.get() == 1:
+            self.month = 'Январь'
+            list.append(self.month)
+        if self.check_var2.get() == 1:
+            self.month = 'Февраль'
+            list.append(self.month)
+        if self.check_var3.get() == 1:
+            self.month = 'Март'
+            list.append(self.month)
+        if self.check_var4.get() == 1:
+            self.month = 'Апрель'
+            list.append(self.month)
+        if self.check_var5.get() == 1:
+            self.month = 'Май'
+            list.append(self.month)
+        if self.check_var6.get() == 1:
+            self.month = 'Июнь'
+            list.append(self.month)
+        if self.check_var7.get() == 1:
+            self.month = 'Июль'
+            list.append(self.month)
+        if self.check_var8.get() == 1:
+            self.month = 'Август'
+            list.append(self.month)
+        if self.check_var9.get() == 1:
+            self.month = 'Сентябрь'
+            list.append(self.month)
+        if self.check_var10.get() == 1:
+            self.month = 'Октябрь'
+            list.append(self.month)
+        if self.check_var11.get() == 1:
+            self.month = 'Ноябрь'
+            list.append(self.month)
+        if self.check_var12.get() == 1:
+            self.month = 'Декабрь'
+            list.append(self.month)
+        list_2 = []
+        x_coord = list
+        y_coord = []
+        for l in list:
+            for i in items:
+                if i.item == self.info_var.get() and i.year == 2020 and i.month == l:
+                    x = str(i.weight_penetration)
+                    x = x.replace(',','.')
+                    list_2.append(float(x))
 
+        for en in list_2:
+            self.quantity += en
+            y_coord.append(en)
+        users = []
+        for num in range(0,len(list)):
+                users.append({"month": str(list[num]),
+                    "weighted_penetration": str(list_2[num])})
+        with open(FILENAME, "w", newline="") as file:
+            columns = ["month", "weighted_penetration"]
+            writer = csv.DictWriter(file, fieldnames=columns)
+            writer.writeheader()
+
+            # запись нескольких строк
+            writer.writerows(users)
+
+        print(list)
+        print(list_2)
+            #tkinter.messagebox.showinfo('INFO',
+                                        #f'File {FILENAME} has been succesfully written!')
 def list_work():
     root = Tk()
     ex = Data_GUI()
@@ -530,11 +591,13 @@ def list_work():
     save_menu.add_command(label="Save month-sold_packs data to JSON", command=ex.save_quant_month_to_json)
     save_menu.add_command(label="Save month-weighted_penetration data to JSON",
                           command=ex.save_weight_pen_month_to_json)
+    save_menu.add_command(label="Save month-weighted_penetration data to CSV",
+                          command=ex.save_weight_pen_month_to_csv)
 
     file_menu.add_command(label="New")
     file_menu.add_cascade(label="Save",menu=save_menu)
     file_menu.add_separator()
-    file_menu.add_command(label="Exit")
+    file_menu.add_command(label="Exit",command=root.destroy)
 
     main_menu.add_cascade(label="File",menu=file_menu)
     main_menu.add_cascade(label="Edit")
